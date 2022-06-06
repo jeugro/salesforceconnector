@@ -52,7 +52,14 @@
 	"description": "SalesForce Connector for Adaptive Framework",
 	"ver": "22.6.6.1013",
 	"enableCICD": true,
-	"apps": [],
+	"apps": [
+		{
+			"id": "d6353eff-38bd-442f-af23-78bef277ce62",
+			"application": "planet9_salesforce_connector_builder",
+			"title": "SalesForce Connector",
+			"description": "SalesForce Connector"
+		}
+	],
 	"api": [
 		{
 			"id": "28abbaa4-5fbb-4e19-815f-0a6aa6bed859",
