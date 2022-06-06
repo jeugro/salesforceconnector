@@ -32,11 +32,24 @@
 			"  }",
 			"}",
 			""
+		],
+		"readme": [
+			"==OBJECT STRING==",
+			"After installing this repo, do these changes\r",
+			"\r",
+			"\r",
+			"1) Create a Proxy Authentication to SalesForce, using oAuth 2.0\r",
+			"2) Change endpoint of API \"SalesForce Connector Metadata\"\r",
+			"     a) Add the newy created Proxy authentication \r",
+			"     b) Change Endpoint from \"https://neptune-software.my.salesforce.com\" to your SalesForce endpoint\r",
+			"\r",
+			"\r",
+			"When defining a Connector in Open Edition, set StartParameters to the ID of the SalesForce Connector"
 		]
 	},
 	"name": "com.neptune.salesforce.connector",
 	"description": "SalesForce Connector for Adaptive Framework",
-	"ver": "22.6.6.101",
+	"ver": "22.6.6.1012",
 	"enableCICD": true,
 	"apps": [],
 	"api": [
