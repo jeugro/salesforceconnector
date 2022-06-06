@@ -1,0 +1,30 @@
+{
+	"id": "761b38b8-b07e-474a-aaf8-70d3decce9f4",
+	"createdAt": "2022-06-04T04:22:51.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"globalScripts": [],
+	"externalModules": [],
+	"entitySets": [
+		{
+			"id": "0a8bfac1-07cd-4bfc-bddb-85562ea67e3a",
+			"name": "p9_sf_connector",
+			"contextname": "p9_sf_connector"
+		}
+	],
+	"apis": [],
+	"name": "get",
+	"ver": "22.6.4.623",
+	"description": "Get Connector",
+	"content": [
+		"==OBJECT STRING==",
+		"const data = await entities.p9_sf_connector.findOne(req.query.id);\r",
+		"result.data = data;\r",
+		"complete();"
+	],
+	"useAsGlobalScript": false,
+	"isTypescript": false,
+	"transpiledContent": null,
+	"lastRunSuccessful": false,
+	"jsscriptGroup": "8724ce1d-db36-43cb-a923-3e0be5432b2a",
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12"
+}

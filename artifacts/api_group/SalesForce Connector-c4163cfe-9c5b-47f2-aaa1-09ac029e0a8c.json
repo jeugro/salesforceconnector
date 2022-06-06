@@ -1,0 +1,9 @@
+{
+	"id": "c4163cfe-9c5b-47f2-aaa1-09ac029e0a8c",
+	"createdAt": "2022-06-03T11:53:17.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"name": "SalesForce Connector",
+	"description": "SalesForce Connector",
+	"ver": "22.6.3.1353",
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12"
+}

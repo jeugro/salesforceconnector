@@ -1,0 +1,123 @@
+{
+	"id": "ace216dd-a722-4e40-9d39-6049629fca12",
+	"createdAt": "2022-06-03T09:58:25.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"git": {
+		"targetServers": [],
+		"remote": "https://github.com/OleAndreHaugen/salesforceconnector.git",
+		"testServers": [],
+		"packageJSON": [
+			"==OBJECT STRING==",
+			"{",
+			"  \"name\": \"com.neptune.salesforce.connector\",",
+			"  \"version\": \"1.0.0\",",
+			"  \"description\": \"SalesForce Connector for Adaptive Framework\",",
+			"  \"author\": \"Neptune Software\",",
+			"  \"license\": \"LicenseRef-LICENSE\",",
+			"  \"private\": true,",
+			"  \"scripts\": {",
+			"    \"deploy\": \"ts-node src/deploy.ts\",",
+			"    \"test\": \"jest --passWithNoTests\"",
+			"  },",
+			"  \"engines\": {",
+			"    \"node\": \"14.16.0\"",
+			"  },",
+			"  \"devDependencies\": {",
+			"    \"@types/jest\": \"^26.0.23\",",
+			"    \"typescript\": \"^4.2.3\",",
+			"    \"ts-node\": \"^10.0.0\",",
+			"    \"axios\": \"^0.21.1\",",
+			"    \"jest\": \"^27.0.4\",",
+			"    \"ts-jest\": \"^27.0.3\"",
+			"  }",
+			"}",
+			""
+		]
+	},
+	"name": "com.neptune.salesforce.connector",
+	"description": "SalesForce Connector for Adaptive Framework",
+	"ver": "22.6.6.101",
+	"enableCICD": true,
+	"apps": [],
+	"api": [
+		{
+			"id": "28abbaa4-5fbb-4e19-815f-0a6aa6bed859",
+			"name": "SalesForce Connector Metadata",
+			"description": "SalesForce Connector Metadata",
+			"apiGroup": "c4163cfe-9c5b-47f2-aaa1-09ac029e0a8c"
+		},
+		{
+			"id": "0b2dc20f-1ffd-42a0-a6e0-552321703387",
+			"name": "SalesForce Connector Client",
+			"description": null,
+			"apiGroup": "c4163cfe-9c5b-47f2-aaa1-09ac029e0a8c"
+		}
+	],
+	"odataSource": [],
+	"odataMock": [],
+	"dictionary": [
+		{
+			"id": "0a8bfac1-07cd-4bfc-bddb-85562ea67e3a",
+			"name": "p9_sf_connector",
+			"description": "SalesForce Connector"
+		}
+	],
+	"jsclass": [
+		{
+			"id": "cc17fcfd-400e-4689-95d6-23773722ac64",
+			"name": "list",
+			"description": "List Connectors"
+		},
+		{
+			"id": "761b38b8-b07e-474a-aaf8-70d3decce9f4",
+			"name": "get",
+			"description": "Get Connector"
+		},
+		{
+			"id": "39ffcbcf-464a-4e52-9cfe-92bdb0afc299",
+			"name": "save",
+			"description": null
+		},
+		{
+			"id": "5211fb19-2b9e-4b41-bf93-bc766ad4d52e",
+			"name": "adaptive_sel",
+			"description": "Get FieldCatalog"
+		},
+		{
+			"id": "feb6a33f-b6c0-4312-89b1-60226eb53aff",
+			"name": "adaptive_run",
+			"description": "Run Report"
+		}
+	],
+	"jsscript_group": [
+		{
+			"id": "8724ce1d-db36-43cb-a923-3e0be5432b2a",
+			"name": "SalesForceConnector",
+			"description": null
+		}
+	],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [
+		{
+			"id": "c4163cfe-9c5b-47f2-aaa1-09ac029e0a8c",
+			"name": "SalesForce Connector",
+			"description": "SalesForce Connector"
+		}
+	],
+	"tile": [],
+	"category": [],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"department": [],
+	"script_scheduler": [],
+	"wf_definition": [],
+	"connector": []
+}

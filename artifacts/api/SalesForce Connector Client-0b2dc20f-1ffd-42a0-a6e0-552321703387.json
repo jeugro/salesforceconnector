@@ -1,0 +1,476 @@
+{
+	"id": "0b2dc20f-1ffd-42a0-a6e0-552321703387",
+	"createdAt": "2022-06-04T04:24:34.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"auth": [],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "d6126700-3878-4553-b7eb-f34fe92987a3",
+			"method": "GET",
+			"path": "/list",
+			"description": "",
+			"parameters": [],
+			"headers": [],
+			"responses": [
+				{
+					"id": "14cb84c6-b0e0-49db-b037-cb3e497884c1",
+					"status": "200",
+					"description": "OK",
+					"headers": [],
+					"content": [
+						{
+							"id": "bf590328-4073-4358-9422-0cb41cf8db2e",
+							"name": "",
+							"objectType": "array",
+							"items": [
+								{
+									"name": "response",
+									"objectType": "reference",
+									"required": false,
+									"children": [],
+									"reference": "list"
+								}
+							]
+						}
+					]
+				}
+			],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"serverScript": "cc17fcfd-400e-4689-95d6-23773722ac64"
+		},
+		{
+			"id": "9dcda366-2a93-46b4-83a9-f40e9d231d75",
+			"method": "GET",
+			"path": "/get",
+			"description": "",
+			"parameters": [
+				{
+					"name": "id",
+					"description": "",
+					"required": true,
+					"inPath": false,
+					"value": "",
+					"default": "",
+					"example": ""
+				}
+			],
+			"headers": [],
+			"responses": [
+				{
+					"id": "de8a393d-756d-4050-d0b3-41e8730d35a5",
+					"status": "200",
+					"description": "OK",
+					"headers": [],
+					"content": [
+						{
+							"id": "9eac8c85-b9ef-4016-b7c8-8f22935090fa",
+							"name": "",
+							"objectType": "object",
+							"items": [
+								{
+									"name": "response",
+									"objectType": "reference",
+									"required": false,
+									"children": [],
+									"reference": "get"
+								}
+							]
+						}
+					]
+				}
+			],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"serverScript": "761b38b8-b07e-474a-aaf8-70d3decce9f4"
+		},
+		{
+			"id": "c065f407-5450-402a-f576-b13bb5f937c0",
+			"method": "POST",
+			"path": "/save",
+			"description": "",
+			"parameters": [],
+			"headers": [],
+			"responses": [
+				{
+					"id": "22b15479-661c-463f-a5d7-33adc31355b1",
+					"status": "200",
+					"description": "OK",
+					"headers": [],
+					"content": [
+						{
+							"id": "53ceaee7-57d3-4e0d-e127-ddb147a9de21",
+							"name": "",
+							"objectType": "object",
+							"items": [
+								{
+									"name": "response",
+									"objectType": "reference",
+									"required": false,
+									"children": [],
+									"reference": "get"
+								}
+							]
+						}
+					]
+				}
+			],
+			"content": [
+				{
+					"objectType": "object",
+					"items": [
+						{
+							"name": "",
+							"objectType": "reference",
+							"required": false,
+							"children": [],
+							"reference": "get"
+						}
+					]
+				}
+			],
+			"auth": [],
+			"endpoints": [],
+			"serverScript": "39ffcbcf-464a-4e52-9cfe-92bdb0afc299"
+		}
+	],
+	"definitions": [
+		{
+			"id": "60408981-4688-4ef9-9afa-933f7666da7b",
+			"name": "list",
+			"description": "",
+			"isInclude": false,
+			"properties": [
+				{
+					"id": "3706d28a-9017-4f95-d08e-05e57aa1540b",
+					"name": "id",
+					"objectType": "string",
+					"required": false,
+					"parent": "db623045-5dd7-44a6-8c88-07b7016c7b0d",
+					"example": "6aa7ab94-1dd3-403f-bce5-c6dfbca23b36",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				},
+				{
+					"id": "3543516d-41f4-4d9c-d3dc-ec6a823371ff",
+					"name": "updatedAt",
+					"objectType": "number",
+					"required": false,
+					"parent": "db623045-5dd7-44a6-8c88-07b7016c7b0d",
+					"example": 1654316501987,
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				},
+				{
+					"id": "3b697d64-a044-4b33-e60b-deb2729f470b",
+					"name": "updatedBy",
+					"objectType": "string",
+					"required": false,
+					"parent": "db623045-5dd7-44a6-8c88-07b7016c7b0d",
+					"example": "ole-andre.haugen@neptune-software.com",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				},
+				{
+					"id": "a69c7452-a245-4d5a-bf8e-d7d2f47fb372",
+					"name": "name",
+					"objectType": "string",
+					"required": false,
+					"parent": "db623045-5dd7-44a6-8c88-07b7016c7b0d",
+					"example": "demo1",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				},
+				{
+					"id": "dfb9ab21-5039-4860-924b-3ed89ee51bb6",
+					"name": "description",
+					"objectType": "string",
+					"required": false,
+					"parent": "db623045-5dd7-44a6-8c88-07b7016c7b0d",
+					"example": "dedede",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				},
+				{
+					"id": "db623045-5dd7-44a6-8c88-07b7016c7b0d",
+					"name": "",
+					"objectType": "object",
+					"required": false,
+					"parent": "",
+					"isParent": true,
+					"enableValueHelp": false,
+					"canAddSubNode": true,
+					"enabled": true,
+					"hideNameField": false,
+					"children": [
+						{
+							"id": "3706d28a-9017-4f95-d08e-05e57aa1540b",
+							"name": "id",
+							"objectType": "string",
+							"required": false,
+							"parent": "db623045-5dd7-44a6-8c88-07b7016c7b0d",
+							"example": "6aa7ab94-1dd3-403f-bce5-c6dfbca23b36",
+							"isParent": false,
+							"enableValueHelp": false,
+							"canAddSubNode": false,
+							"enabled": true,
+							"hideNameField": false,
+							"children": []
+						},
+						{
+							"id": "3543516d-41f4-4d9c-d3dc-ec6a823371ff",
+							"name": "updatedAt",
+							"objectType": "number",
+							"required": false,
+							"parent": "db623045-5dd7-44a6-8c88-07b7016c7b0d",
+							"example": 1654316501987,
+							"isParent": false,
+							"enableValueHelp": false,
+							"canAddSubNode": false,
+							"enabled": true,
+							"hideNameField": false,
+							"children": []
+						},
+						{
+							"id": "3b697d64-a044-4b33-e60b-deb2729f470b",
+							"name": "updatedBy",
+							"objectType": "string",
+							"required": false,
+							"parent": "db623045-5dd7-44a6-8c88-07b7016c7b0d",
+							"example": "ole-andre.haugen@neptune-software.com",
+							"isParent": false,
+							"enableValueHelp": false,
+							"canAddSubNode": false,
+							"enabled": true,
+							"hideNameField": false,
+							"children": []
+						},
+						{
+							"id": "a69c7452-a245-4d5a-bf8e-d7d2f47fb372",
+							"name": "name",
+							"objectType": "string",
+							"required": false,
+							"parent": "db623045-5dd7-44a6-8c88-07b7016c7b0d",
+							"example": "demo1",
+							"isParent": false,
+							"enableValueHelp": false,
+							"canAddSubNode": false,
+							"enabled": true,
+							"hideNameField": false,
+							"children": []
+						},
+						{
+							"id": "dfb9ab21-5039-4860-924b-3ed89ee51bb6",
+							"name": "description",
+							"objectType": "string",
+							"required": false,
+							"parent": "db623045-5dd7-44a6-8c88-07b7016c7b0d",
+							"example": "dedede",
+							"isParent": false,
+							"enableValueHelp": false,
+							"canAddSubNode": false,
+							"enabled": true,
+							"hideNameField": false,
+							"children": []
+						}
+					]
+				}
+			],
+			"type": "array"
+		},
+		{
+			"id": "3b1512be-a900-4b31-f39c-c3469e08ae2e",
+			"name": "get",
+			"description": "",
+			"isInclude": false,
+			"properties": [
+				{
+					"id": "01206b6e-7187-4b4c-d7a9-0c0e3d681c65",
+					"name": "id",
+					"objectType": "string",
+					"required": false,
+					"parent": "",
+					"example": "6aa7ab94-1dd3-403f-bce5-c6dfbca23b36",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				},
+				{
+					"id": "b32fb268-d4fc-40f3-c478-8434c70021ff",
+					"name": "createdAt",
+					"objectType": "number",
+					"required": false,
+					"parent": "",
+					"example": 1654316501987,
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				},
+				{
+					"id": "dc8455d4-a6df-4ed8-e1bc-4bf45b11d391",
+					"name": "updatedAt",
+					"objectType": "number",
+					"required": false,
+					"parent": "",
+					"example": 1654316501987,
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				},
+				{
+					"id": "90089257-5a24-470c-ea2e-2fd8da1daac1",
+					"name": "createdBy",
+					"objectType": "string",
+					"required": false,
+					"parent": "",
+					"example": "ole-andre.haugen@neptune-software.com",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				},
+				{
+					"id": "85b5af44-bfd4-4d5f-9e96-cce008106009",
+					"name": "updatedBy",
+					"objectType": "string",
+					"required": false,
+					"parent": "",
+					"example": "ole-andre.haugen@neptune-software.com",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				},
+				{
+					"id": "08007e35-0af3-41ef-bc71-963b2b8cfd02",
+					"name": "name",
+					"objectType": "string",
+					"required": false,
+					"parent": "",
+					"example": "demo1",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				},
+				{
+					"id": "781c56b0-e7db-4baf-8698-d08faa4fd759",
+					"name": "description",
+					"objectType": "string",
+					"required": false,
+					"parent": "",
+					"example": "dedede",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				},
+				{
+					"id": "eb5faae3-1ee0-4b6e-84d5-ff1418343b39",
+					"name": "table",
+					"objectType": "string",
+					"required": false,
+					"parent": "",
+					"example": "account",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				},
+				{
+					"id": "fec773fa-6d61-4956-9427-5f7c728b6627",
+					"name": "fields_selection",
+					"objectType": "object",
+					"required": false,
+					"parent": "",
+					"isParent": true,
+					"enableValueHelp": false,
+					"canAddSubNode": true,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				},
+				{
+					"id": "1078f74c-5918-472c-eefb-fca0ce1c9df2",
+					"name": "fields_list",
+					"objectType": "object",
+					"required": false,
+					"parent": "",
+					"isParent": true,
+					"enableValueHelp": false,
+					"canAddSubNode": true,
+					"enabled": true,
+					"hideNameField": false,
+					"children": []
+				}
+			],
+			"type": "object"
+		}
+	],
+	"documentation": [],
+	"name": "SalesForce Connector Client",
+	"endpoint": "/api/serverscript/salesforceconnectorclient",
+	"ver": "22.6.4.646",
+	"version": "1.0",
+	"description": null,
+	"mediaType": null,
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "script",
+	"about": null,
+	"enableProxy": false,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": false,
+	"useOwnProcess": false,
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12",
+	"apiGroup": "c4163cfe-9c5b-47f2-aaa1-09ac029e0a8c",
+	"apiFormat": 1,
+	"roles": []
+}
