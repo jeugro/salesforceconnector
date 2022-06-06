@@ -39,9 +39,10 @@
 			"\r",
 			"\r",
 			"1) Create a Proxy Authentication to SalesForce, using oAuth 2.0\r",
-			"2) Change endpoint of API \"SalesForce Connector Metadata\"\r",
-			"     a) Add the newy created Proxy authentication \r",
-			"     b) Change Endpoint from \"https://neptune-software.my.salesforce.com\" to your SalesForce endpoint\r",
+			"2) Use API Designer and open \"SalesForce Connector Metadata\":\r",
+			"\r",
+			"- Add the new created Proxy authentication to the API\r",
+			"- Change Endpoint from \"https://neptune-software.my.salesforce.com\" to your SalesForce endpoint\r",
 			"\r",
 			"\r",
 			"When defining a Connector in Open Edition, set StartParameters to the ID of the SalesForce Connector"
@@ -49,7 +50,7 @@
 	},
 	"name": "com.neptune.salesforce.connector",
 	"description": "SalesForce Connector for Adaptive Framework",
-	"ver": "22.6.6.1012",
+	"ver": "22.6.6.1013",
 	"enableCICD": true,
 	"apps": [],
 	"api": [
