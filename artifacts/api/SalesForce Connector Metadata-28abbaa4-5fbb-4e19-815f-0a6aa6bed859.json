@@ -16,7 +16,7 @@
 		{
 			"id": "8d33554d-a4e5-4ef7-8444-daa4ebb18edf",
 			"method": "GET",
-			"path": "/services/data/v53.0/sobjects",
+			"path": "/services/data/v56.0/sobjects",
 			"description": "",
 			"parameters": [],
 			"headers": [],
@@ -52,7 +52,7 @@
 		{
 			"id": "7b6e5636-9d3e-47ea-e0e1-09482e0fb2ca",
 			"method": "GET",
-			"path": "/services/data/v53.0/sobjects/(table)/describe",
+			"path": "/services/data/v56.0/sobjects/(table)/describe",
 			"description": "",
 			"parameters": [
 				{
@@ -98,7 +98,7 @@
 		{
 			"id": "7641f0ef-4fec-48a2-9084-651b32a540ea",
 			"method": "GET",
-			"path": "/services/data/v53.0/query",
+			"path": "/services/data/v56.0/query",
 			"description": "",
 			"parameters": [
 				{
@@ -5973,7 +5973,7 @@
 	"documentation": [],
 	"name": "SalesForce Connector Metadata",
 	"endpoint": "https://neptune-software.my.salesforce.com",
-	"ver": "22.6.4.859",
+	"ver": "22.10.29.852",
 	"version": "1.0",
 	"description": "SalesForce Connector Metadata",
 	"mediaType": null,

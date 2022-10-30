@@ -135,6 +135,19 @@
 			"auth": [],
 			"endpoints": [],
 			"serverScript": "39ffcbcf-464a-4e52-9cfe-92bdb0afc299"
+		},
+		{
+			"id": "a4aa7fd4-0429-4c26-9245-f9b2b0756c19",
+			"method": "DELETE",
+			"path": "/delete",
+			"description": "",
+			"parameters": [],
+			"headers": [],
+			"responses": [],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"serverScript": "8a1c38ef-fbcc-412a-be0a-c1306ce0e3be"
 		}
 	],
 	"definitions": [
@@ -452,7 +465,7 @@
 	"documentation": [],
 	"name": "SalesForce Connector Client",
 	"endpoint": "/api/serverscript/salesforceconnectorclient",
-	"ver": "22.6.4.646",
+	"ver": "22.10.29.88",
 	"version": "1.0",
 	"description": null,
 	"mediaType": null,

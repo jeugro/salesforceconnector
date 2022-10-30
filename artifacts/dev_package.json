@@ -50,14 +50,14 @@
 	},
 	"name": "com.neptune.salesforce.connector",
 	"description": "SalesForce Connector for Adaptive Framework",
-	"ver": "22.6.6.1013",
+	"ver": "22.10.30.1224",
 	"enableCICD": true,
 	"apps": [
 		{
-			"id": "d6353eff-38bd-442f-af23-78bef277ce62",
-			"application": "planet9_salesforce_connector_builder",
-			"title": "SalesForce Connector",
-			"description": "SalesForce Connector"
+			"id": "5b6949c3-4cd0-43ec-acc3-098791593565",
+			"application": "planet9_salesforce_connector",
+			"title": "Salesforce Connector",
+			"description": "Salesforce Connector to Adaptive Framework"
 		}
 	],
 	"api": [
@@ -85,9 +85,19 @@
 	],
 	"jsclass": [
 		{
+			"id": "feb6a33f-b6c0-4312-89b1-60226eb53aff",
+			"name": "SalesforceAdaptiveRun",
+			"description": "Run Report"
+		},
+		{
 			"id": "cc17fcfd-400e-4689-95d6-23773722ac64",
 			"name": "list",
 			"description": "List Connectors"
+		},
+		{
+			"id": "8a1c38ef-fbcc-412a-be0a-c1306ce0e3be",
+			"name": "delete",
+			"description": null
 		},
 		{
 			"id": "761b38b8-b07e-474a-aaf8-70d3decce9f4",
@@ -95,19 +105,24 @@
 			"description": "Get Connector"
 		},
 		{
+			"id": "5211fb19-2b9e-4b41-bf93-bc766ad4d52e",
+			"name": "SalesforceAdaptiveSetup",
+			"description": "Get FieldCatalog"
+		},
+		{
 			"id": "39ffcbcf-464a-4e52-9cfe-92bdb0afc299",
 			"name": "save",
 			"description": null
 		},
 		{
-			"id": "5211fb19-2b9e-4b41-bf93-bc766ad4d52e",
-			"name": "adaptive_sel",
-			"description": "Get FieldCatalog"
+			"id": "2074a796-e213-4f47-82b2-b4293cb9d25f",
+			"name": "debug",
+			"description": null
 		},
 		{
-			"id": "feb6a33f-b6c0-4312-89b1-60226eb53aff",
-			"name": "adaptive_run",
-			"description": "Run Report"
+			"id": "0b2aaf40-30ae-45b9-b888-d22475e711e8",
+			"name": "postScriptOpportunity",
+			"description": null
 		}
 	],
 	"jsscript_group": [
@@ -129,7 +144,18 @@
 			"description": "SalesForce Connector"
 		}
 	],
-	"tile": [],
+	"tile": [
+		{
+			"id": "9edea199-8c30-400e-bbae-37b73efefb9b",
+			"description": null,
+			"name": "SFC: Account "
+		},
+		{
+			"id": "24947a85-a945-497b-a956-dee7f70bf8e3",
+			"description": null,
+			"name": "SFC: Pipeline"
+		}
+	],
 	"category": [],
 	"launchpad": [],
 	"certificates": [],
@@ -140,5 +166,6 @@
 	"department": [],
 	"script_scheduler": [],
 	"wf_definition": [],
-	"connector": []
+	"connector": [],
+	"events": []
 }

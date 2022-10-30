@@ -51,6 +51,7 @@
 	"description": "SalesForce Connector",
 	"ver": "22.6.4.750",
 	"enableAudit": false,
+	"includeDataInPackage": false,
 	"package": "ace216dd-a722-4e40-9d39-6049629fca12",
 	"rolesRead": [],
 	"rolesWrite": []
