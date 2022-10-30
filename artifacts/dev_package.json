@@ -115,11 +115,6 @@
 			"description": null
 		},
 		{
-			"id": "2074a796-e213-4f47-82b2-b4293cb9d25f",
-			"name": "debug",
-			"description": null
-		},
-		{
 			"id": "0b2aaf40-30ae-45b9-b888-d22475e711e8",
 			"name": "postScriptOpportunity",
 			"description": null
@@ -144,18 +139,7 @@
 			"description": "SalesForce Connector"
 		}
 	],
-	"tile": [
-		{
-			"id": "9edea199-8c30-400e-bbae-37b73efefb9b",
-			"description": null,
-			"name": "SFC: Account "
-		},
-		{
-			"id": "24947a85-a945-497b-a956-dee7f70bf8e3",
-			"description": null,
-			"name": "SFC: Pipeline"
-		}
-	],
+	"tile": [],
 	"category": [],
 	"launchpad": [],
 	"certificates": [],
