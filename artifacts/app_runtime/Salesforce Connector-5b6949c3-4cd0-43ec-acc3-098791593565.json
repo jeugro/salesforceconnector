@@ -3925,7 +3925,7 @@
 										{
 											"attribute": "mode",
 											"grouping": "Properties",
-											"value": "SingleSelect",
+											"value": "MultiSelect",
 											"script": "",
 											"translation": []
 										},
@@ -4673,7 +4673,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.10.30.1223",
+	"ver": "22.10.30.1633",
 	"application": "planet9_salesforce_connector",
 	"title": "Salesforce Connector",
 	"description": "Salesforce Connector to Adaptive Framework",

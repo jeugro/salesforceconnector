@@ -95,6 +95,11 @@
 			"description": "List Connectors"
 		},
 		{
+			"id": "9fb5a6fd-259c-4f3d-bee8-642c8fc22994",
+			"name": "debug",
+			"description": null
+		},
+		{
 			"id": "8a1c38ef-fbcc-412a-be0a-c1306ce0e3be",
 			"name": "delete",
 			"description": null
