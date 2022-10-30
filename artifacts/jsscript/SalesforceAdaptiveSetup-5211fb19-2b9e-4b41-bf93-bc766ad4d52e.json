@@ -13,7 +13,7 @@
 	],
 	"apis": [],
 	"name": "SalesforceAdaptiveSetup",
-	"ver": "22.10.30.1755",
+	"ver": "22.10.30.1825",
 	"description": "Get FieldCatalog",
 	"content": [
 		"==OBJECT STRING==",
@@ -99,7 +99,7 @@
 		"    }\r",
 		"\r",
 		"    // Lookup Fields\r",
-		"    if (field.relationshipName && field.lookupField) {\r",
+		"    if (field.relationshipName && field.lookupField && field.lookupField.split) {\r",
 		"\r",
 		"        const lookupFields = field.lookupField.split(\",\");\r",
 		"\r",
