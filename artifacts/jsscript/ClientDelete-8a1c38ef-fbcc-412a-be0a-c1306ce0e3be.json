@@ -1,6 +1,6 @@
 {
-	"id": "761b38b8-b07e-474a-aaf8-70d3decce9f4",
-	"createdAt": "2022-06-04T04:22:51.000Z",
+	"id": "8a1c38ef-fbcc-412a-be0a-c1306ce0e3be",
+	"createdAt": "2022-10-29T06:06:42.000Z",
 	"createdBy": "ole-andre.haugen@neptune-software.com",
 	"globalScripts": [],
 	"externalModules": [],
@@ -12,13 +12,16 @@
 		}
 	],
 	"apis": [],
-	"name": "get",
-	"ver": "22.6.4.623",
-	"description": "Get Connector",
+	"name": "ClientDelete",
+	"ver": "22.10.31.1039",
+	"description": null,
 	"content": [
 		"==OBJECT STRING==",
-		"const data = await entities.p9_sf_connector.findOne(req.query.id);\r",
-		"result.data = data;\r",
+		"const data = await entities.p9_sf_connector.delete(req.query.id);\r",
+		"result.data = {\r",
+		"    status: \"OK\",\r",
+		"    message: \"Connector Deleted\"\r",
+		"};\r",
 		"complete();"
 	],
 	"useAsGlobalScript": false,

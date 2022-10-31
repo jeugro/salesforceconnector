@@ -5,52 +5,11 @@
 	"git": {
 		"targetServers": [],
 		"remote": "https://github.com/OleAndreHaugen/salesforceconnector.git",
-		"testServers": [],
-		"packageJSON": [
-			"==OBJECT STRING==",
-			"{",
-			"  \"name\": \"com.neptune.salesforce.connector\",",
-			"  \"version\": \"1.0.0\",",
-			"  \"description\": \"SalesForce Connector for Adaptive Framework\",",
-			"  \"author\": \"Neptune Software\",",
-			"  \"license\": \"LicenseRef-LICENSE\",",
-			"  \"private\": true,",
-			"  \"scripts\": {",
-			"    \"deploy\": \"ts-node src/deploy.ts\",",
-			"    \"test\": \"jest --passWithNoTests\"",
-			"  },",
-			"  \"engines\": {",
-			"    \"node\": \"14.16.0\"",
-			"  },",
-			"  \"devDependencies\": {",
-			"    \"@types/jest\": \"^26.0.23\",",
-			"    \"typescript\": \"^4.2.3\",",
-			"    \"ts-node\": \"^10.0.0\",",
-			"    \"axios\": \"^0.21.1\",",
-			"    \"jest\": \"^27.0.4\",",
-			"    \"ts-jest\": \"^27.0.3\"",
-			"  }",
-			"}",
-			""
-		],
-		"readme": [
-			"==OBJECT STRING==",
-			"After installing this repo, do these changes\r",
-			"\r",
-			"\r",
-			"1) Create a Proxy Authentication to SalesForce, using oAuth 2.0\r",
-			"2) Use API Designer and open \"SalesForce Connector Metadata\":\r",
-			"\r",
-			"- Add the new created Proxy authentication to the API\r",
-			"- Change Endpoint from \"https://neptune-software.my.salesforce.com\" to your SalesForce endpoint\r",
-			"\r",
-			"\r",
-			"When defining a Connector in Open Edition, set StartParameters to the ID of the SalesForce Connector"
-		]
+		"testServers": []
 	},
 	"name": "com.neptune.salesforce.connector",
 	"description": "SalesForce Connector for Adaptive Framework",
-	"ver": "22.10.30.1224",
+	"ver": "22.10.31.166",
 	"enableCICD": true,
 	"apps": [
 		{
@@ -91,22 +50,17 @@
 		},
 		{
 			"id": "cc17fcfd-400e-4689-95d6-23773722ac64",
-			"name": "list",
+			"name": "ClientList",
 			"description": "List Connectors"
 		},
 		{
-			"id": "9fb5a6fd-259c-4f3d-bee8-642c8fc22994",
-			"name": "debug",
-			"description": null
-		},
-		{
 			"id": "8a1c38ef-fbcc-412a-be0a-c1306ce0e3be",
-			"name": "delete",
+			"name": "ClientDelete",
 			"description": null
 		},
 		{
 			"id": "761b38b8-b07e-474a-aaf8-70d3decce9f4",
-			"name": "get",
+			"name": "ClientGet",
 			"description": "Get Connector"
 		},
 		{
@@ -116,7 +70,7 @@
 		},
 		{
 			"id": "39ffcbcf-464a-4e52-9cfe-92bdb0afc299",
-			"name": "save",
+			"name": "ClientSave",
 			"description": null
 		},
 		{

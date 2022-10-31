@@ -12,8 +12,8 @@
 		}
 	],
 	"apis": [],
-	"name": "list",
-	"ver": "22.6.4.655",
+	"name": "ClientList",
+	"ver": "22.10.31.1040",
 	"description": "List Connectors",
 	"content": [
 		"==OBJECT STRING==",

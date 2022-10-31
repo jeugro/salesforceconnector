@@ -3469,6 +3469,13 @@
 																							"response": [],
 																							"attributes": [
 																								{
+																									"attribute": "visible",
+																									"grouping": "Properties",
+																									"value": "{= ${filterable} ? true:false}",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
 																									"attribute": "selected",
 																									"grouping": "Properties",
 																									"value": "{enableSel}",
@@ -4673,7 +4680,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.10.30.1633",
+	"ver": "22.10.31.1031",
 	"application": "planet9_salesforce_connector",
 	"title": "Salesforce Connector",
 	"description": "Salesforce Connector to Adaptive Framework",

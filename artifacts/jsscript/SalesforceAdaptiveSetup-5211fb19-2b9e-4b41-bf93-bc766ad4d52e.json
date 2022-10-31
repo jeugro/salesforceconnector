@@ -13,7 +13,7 @@
 	],
 	"apis": [],
 	"name": "SalesforceAdaptiveSetup",
-	"ver": "22.10.30.1825",
+	"ver": "22.10.31.1518",
 	"description": "Get FieldCatalog",
 	"content": [
 		"==OBJECT STRING==",
@@ -108,7 +108,7 @@
 		"                name: field.relationshipName + \"_l_\" + lookupField,\r",
 		"                label: field.relationshipName + \" \" + lookupField,\r",
 		"                type: type,\r",
-		"                usage: \"OUTPUT\",\r",
+		"                usage: \"BOTH\",\r",
 		"                items: []\r",
 		"            });\r",
 		"        })\r",
