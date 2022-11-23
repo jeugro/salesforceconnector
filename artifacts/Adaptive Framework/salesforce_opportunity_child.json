@@ -1,0 +1,241 @@
+{
+	"id": "4c153615-9aed-48fe-b3b9-059e1f6121b8",
+	"createdAt": "2022-10-30T08:23:37.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"settings": {
+		"properties": {
+			"report": {
+				"showIcon": true,
+				"iconButtonClose": "",
+				"textButtonClose": "Close",
+				"typeButtonClose": "Transparent",
+				"iconButtonCreate": "",
+				"textButtonCreate": "Create",
+				"typeButtonCreate": "Emphasized",
+				"iconButtonExport": "sap-icon://excel-attachment",
+				"textButtonExport": "",
+				"typeButtonExport": "Transparent",
+				"iconButtonImport": "sap-icon://fa-solid/file-import",
+				"textButtonImport": "",
+				"typeButtonImport": "Transparent",
+				"iconButtonMultiSelect": "",
+				"textButtonMultiSelect": "MultiSelect",
+				"typeButtonMultiSelect": "Emphasized",
+				"iconButtonRun": "",
+				"textButtonRun": "Update",
+				"typeButtonRun": "Emphasized",
+				"enableRun": false,
+				"enableCreate": false,
+				"enableClose": false,
+				"enableDelete": false,
+				"enableExport": false,
+				"enableImport": false,
+				"enableMultiSelect": false,
+				"enableVariant": false,
+				"hideHeader": true,
+				"autoRun": true,
+				"autoRunFocus": true,
+				"searchLabel": "Search",
+				"searchPlaceholder": "",
+				"title": "Opportunities",
+				"actionButtonLeft": false
+			},
+			"form": {
+				"enableCompact": false,
+				"headerExpanded": true
+			},
+			"table": {
+				"enablePagination": true,
+				"paginationShowSelection": true,
+				"paginationRows": 25,
+				"action1Text": "",
+				"action1Type": "Transparent",
+				"action2Text": "",
+				"action2Type": "Transparent",
+				"action3Text": "",
+				"action3Type": "Transparent",
+				"showSeparators": "All",
+				"alternateRowColors": true,
+				"enableCompact": false,
+				"enableAction1": false,
+				"enableAction2": false,
+				"enableAction3": false,
+				"fixedLayout": false,
+				"inset": false,
+				"initialSortField": "",
+				"initialSortOrder": "",
+				"initialGroupField": ""
+			}
+		},
+		"fieldCatalog": [
+			{
+				"name": "AccountId",
+				"label": "Account ID",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Amount",
+				"label": "Amount",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "CurrencyIsoCode",
+				"label": "Opportunity Currency",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Description",
+				"label": "Description",
+				"type": "string",
+				"usage": "OUTPUT"
+			},
+			{
+				"name": "ForecastCategoryName",
+				"label": "Forecast Category",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Id",
+				"label": "Opportunity ID",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Name",
+				"label": "Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Owner.Name",
+				"label": "Full Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Owner.UserRole.Name",
+				"label": "Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Probability",
+				"label": "Probability (%)",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Reseller__r.Name",
+				"label": "Account Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "StageName",
+				"label": "Stage",
+				"type": "string",
+				"usage": "BOTH"
+			}
+		],
+		"fieldsSel": [
+			{
+				"visible": false,
+				"name": "AccountId",
+				"text": "Account ID",
+				"fieldPos": 1,
+				"required": true,
+				"type": ""
+			}
+		],
+		"fieldsRun": [
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Name",
+				"text": "Name",
+				"fieldPos": 2,
+				"wrapping": true,
+				"vAlign": ""
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "StageName",
+				"text": "Stage",
+				"fieldPos": 3,
+				"vAlign": "",
+				"wrapping": true
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Probability",
+				"text": "Probability ",
+				"fieldPos": 4,
+				"type": "ObjectNumber",
+				"numberUnitType": "Fixed",
+				"numberUnitFixed": "%",
+				"hAlign": "End",
+				"vAlign": ""
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Amount",
+				"text": "Amount",
+				"fieldPos": 5,
+				"type": "ObjectNumber",
+				"hAlign": "End",
+				"numberUnitType": "Binding",
+				"numberUnitBinding": "CurrencyIsoCode",
+				"formatter": "number01",
+				"enableSum": true,
+				"vAlign": "",
+				"width": "150px"
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": false,
+				"name": "CurrencyIsoCode",
+				"text": "Opportunity Currency",
+				"fieldPos": 6
+			}
+		],
+		"defaultVariant": {
+			"id": "e510f6e4-0ef4-449e-8b1c-5ec7a95dab5e",
+			"colOrder": "key_a_to_z",
+			"rowOrder": "key_a_to_z",
+			"row": [],
+			"column": [],
+			"val": [],
+			"inclusions": {},
+			"exclusions": {}
+		}
+	},
+	"name": "salesforce_opportunity_child",
+	"description": "",
+	"group": "",
+	"type": "C",
+	"connectorid": "9c0778ee-2d78-4a73-a762-90eeb883be98",
+	"scriptSel": null,
+	"scriptRun": null,
+	"tableid": null,
+	"ver": "22.11.23.756",
+	"disabled": false,
+	"appType": "A",
+	"application": "planet9_adaptive_list",
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12",
+	"roles": [],
+	"scriptSelObj": null,
+	"scriptRunObj": null,
+	"tableObj": null
+}

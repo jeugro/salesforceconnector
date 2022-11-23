@@ -1,0 +1,251 @@
+{
+	"id": "68820a6f-975c-4a2f-b9e2-be68c45184b9",
+	"createdAt": "2022-10-30T07:56:39.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"settings": {
+		"properties": {
+			"report": {
+				"showIcon": true,
+				"iconButtonClose": "",
+				"textButtonClose": "Close",
+				"typeButtonClose": "Transparent",
+				"iconButtonSave": "",
+				"textButtonSave": "Save",
+				"textToastSave": "Saved",
+				"typeButtonSave": "Emphasized",
+				"tab0Text": "General",
+				"tab1Text": "Opportunities",
+				"tab2Text": "Contacts",
+				"tab3Text": "Tab 3",
+				"tab4Text": "Tab 4",
+				"tab5Text": "Tab 5",
+				"enableClose": true,
+				"enableSave": false,
+				"enableTab1": true,
+				"enableTab2": true,
+				"enableTab3": false,
+				"enableTab4": false,
+				"enableTab5": false,
+				"title": "Account",
+				"_tab1Nav": {
+					"destinationType": "F",
+					"openAs": "P",
+					"butType": "Accept",
+					"destinationTargetF": "4c153615-9aed-48fe-b3b9-059e1f6121b8",
+					"keyField": [
+						{
+							"fieldName": "AccountId",
+							"key": "Id",
+							"value": ""
+						}
+					]
+				},
+				"_tab2Nav": {
+					"destinationType": "F",
+					"openAs": "P",
+					"butType": "Accept",
+					"destinationTargetF": "fbc114af-eec0-4222-9f4c-52053a606ddc",
+					"keyField": [
+						{
+							"fieldName": "AccountId",
+							"key": "Id",
+							"value": ""
+						}
+					]
+				},
+				"actionButtonLeft": false,
+				"iconButtonDelete": "",
+				"textButtonDelete": "Delete",
+				"textToastDelete": "Deleted",
+				"typeButtonDelete": "Reject",
+				"iconButtonAttachment": "",
+				"textButtonAttachment": "Add Attachment",
+				"typeButtonAttachment": "Transparent",
+				"tabAText": "Attachment",
+				"enableDelete": false,
+				"enableAttachment": false,
+				"tabAttachmentText": "Attachment",
+				"enableUppercase": false,
+				"enablePadding": true
+			},
+			"form": {
+				"enableCompact": false,
+				"enableCentered": false,
+				"formLayout": "ColumnLayout",
+				"columnsL": "3",
+				"columnsM": "2",
+				"labelSpanL": "12",
+				"labelDesign": "Standard"
+			},
+			"table": {}
+		},
+		"fieldCatalog": [
+			{
+				"name": "AccountSource",
+				"label": "Account Source",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Account_Category__c",
+				"label": "Account Category",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Account_Number2__c",
+				"label": "Account Number",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Account_Status__c",
+				"label": "Account Status",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "BillingCountry",
+				"label": "Billing Country",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Id",
+				"label": "Account ID",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Industry",
+				"label": "Industry",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "IsDeleted",
+				"label": "Deleted",
+				"type": "boolean",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Name",
+				"label": "Account Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "NumberOfEmployees",
+				"label": "Employees",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Owner.Name",
+				"label": "Full Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Type",
+				"label": "Account Type",
+				"type": "string",
+				"usage": "BOTH"
+			}
+		],
+		"fieldsSel": [
+			{
+				"editable": false,
+				"visible": true,
+				"name": "Id",
+				"text": "ID Salesforce",
+				"fieldPos": 1,
+				"columnLabel": "Account"
+			},
+			{
+				"editable": false,
+				"visible": true,
+				"name": "Account_Number2__c",
+				"text": "ID SAP",
+				"fieldPos": 2
+			},
+			{
+				"editable": false,
+				"visible": true,
+				"name": "Name",
+				"text": "Name",
+				"fieldPos": 3
+			},
+			{
+				"editable": false,
+				"visible": true,
+				"name": "Type",
+				"text": "Type",
+				"fieldPos": 4
+			},
+			{
+				"editable": false,
+				"visible": true,
+				"name": "NumberOfEmployees",
+				"text": "Employees",
+				"fieldPos": 5
+			},
+			{
+				"editable": false,
+				"visible": true,
+				"name": "AccountSource",
+				"text": "Source",
+				"fieldPos": 6
+			},
+			{
+				"editable": false,
+				"visible": true,
+				"name": "Industry",
+				"text": "Industry",
+				"fieldPos": 7
+			},
+			{
+				"editable": false,
+				"visible": true,
+				"name": "BillingCountry",
+				"text": "Country",
+				"fieldPos": 8,
+				"columnLabel": "Billing"
+			}
+		],
+		"fieldsRun": [
+			{
+				"name": "Id",
+				"text": "Account ID",
+				"fieldPos": 9
+			}
+		],
+		"defaultVariant": {
+			"id": "6fbd4dac-2e26-451f-b3e7-d8883df185c7",
+			"colOrder": "key_a_to_z",
+			"rowOrder": "key_a_to_z",
+			"row": [],
+			"column": [],
+			"val": [],
+			"inclusions": {},
+			"exclusions": {}
+		}
+	},
+	"name": "salesforce_account_detail",
+	"description": "",
+	"group": "",
+	"type": "C",
+	"connectorid": "b0be71cb-0c96-449d-83da-8d0c559ce946",
+	"scriptSel": null,
+	"scriptRun": null,
+	"tableid": null,
+	"ver": "22.11.23.734",
+	"disabled": false,
+	"appType": "A",
+	"application": "planet9_adaptive_edit",
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12",
+	"roles": [],
+	"scriptSelObj": null,
+	"scriptRunObj": null,
+	"tableObj": null
+}

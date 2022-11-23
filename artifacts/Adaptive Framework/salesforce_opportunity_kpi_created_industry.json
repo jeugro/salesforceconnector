@@ -1,0 +1,200 @@
+{
+	"id": "91637069-6fe9-4257-b5df-acd9c4e75a18",
+	"createdAt": "2022-11-04T07:05:59.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"settings": {
+		"properties": {
+			"report": {
+				"paginationRows": "5000",
+				"updateTime": 0,
+				"initialGroupField": "",
+				"initialGroupOrder": "ASC"
+			},
+			"form": {
+				"enableCompact": false,
+				"showFilter": false
+			},
+			"table": {
+				"titleAlign": "left",
+				"chartHeight": "400",
+				"chartType": "columnstacked",
+				"enableSorting": false,
+				"enableMonochrome": true,
+				"legendEnable": true,
+				"legendAlign": "right",
+				"legendVerticalAlign": "top",
+				"legendLayout": "vertical",
+				"xAxisTitleEnable": false,
+				"xAxisReversed": false,
+				"xAxisStartOnTick": true,
+				"xAxisGridLineWidth": 0,
+				"yAxisTitleEnable": false,
+				"yAxisReversed": false,
+				"yAxisStartOnTick": true,
+				"yAxisGridLineWidth": 1,
+				"colorMonochrome": "#008299",
+				"chartColor": "",
+				"title": "",
+				"subTitle": "Created opportunity per month per industry",
+				"pieInnerSize": 0,
+				"enable3D": false,
+				"alpha3D": 0,
+				"beta3D": 0,
+				"depth3D": 100
+			}
+		},
+		"fieldCatalog": [
+			{
+				"name": "Account.Industry",
+				"label": "Industry",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "AccountId",
+				"label": "Account ID",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Amount",
+				"label": "Amount",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "CreatedDate",
+				"label": "Created Date",
+				"type": "timestamp",
+				"usage": "BOTH"
+			},
+			{
+				"name": "CurrencyIsoCode",
+				"label": "Opportunity Currency",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Description",
+				"label": "Description",
+				"type": "string",
+				"usage": "OUTPUT"
+			},
+			{
+				"name": "ForecastCategoryName",
+				"label": "Forecast Category",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Id",
+				"label": "Opportunity ID",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "LastModifiedDate",
+				"label": "Last Modified Date",
+				"type": "timestamp",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Name",
+				"label": "Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Owner.Name",
+				"label": "Full Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Owner.UserRole.Name",
+				"label": "Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Probability",
+				"label": "Probability (%)",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Reseller__r.Name",
+				"label": "Account Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "StageName",
+				"label": "Stage",
+				"type": "string",
+				"usage": "BOTH"
+			}
+		],
+		"fieldsSel": [
+			{
+				"visible": true,
+				"name": "StageName",
+				"text": "Stage",
+				"fieldPos": 1,
+				"type": "MultiSelect"
+			},
+			{
+				"visible": true,
+				"name": "CreatedDate",
+				"text": "Created Date",
+				"fieldPos": 2,
+				"default": "THIS_YEAR",
+				"type": "SingleSelect"
+			}
+		],
+		"fieldsRun": [
+			{
+				"visible": true,
+				"name": "Account.Industry",
+				"text": "Industry",
+				"fieldPos": 3,
+				"type": "category"
+			},
+			{
+				"visible": true,
+				"name": "CreatedDate",
+				"text": "Created Date",
+				"enableFilter": false,
+				"fieldPos": 4,
+				"formatter": "date03"
+			}
+		],
+		"defaultVariant": {
+			"id": "ab5c8609-61f3-494d-9f18-716021f385f5",
+			"colOrder": "key_a_to_z",
+			"rowOrder": "key_a_to_z",
+			"row": [],
+			"column": [],
+			"val": [],
+			"inclusions": {},
+			"exclusions": {}
+		}
+	},
+	"name": "salesforce_opportunity_kpi_created_industry",
+	"description": "",
+	"group": "",
+	"type": "C",
+	"connectorid": "9c0778ee-2d78-4a73-a762-90eeb883be98",
+	"scriptSel": null,
+	"scriptRun": null,
+	"tableid": null,
+	"ver": "22.11.23.835",
+	"disabled": false,
+	"appType": "A",
+	"application": "planet9_adaptive_tile_chart",
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12",
+	"roles": [],
+	"scriptSelObj": null,
+	"scriptRunObj": null,
+	"tableObj": null
+}

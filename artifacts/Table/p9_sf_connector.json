@@ -1,0 +1,44 @@
+{
+	"id": "0a8bfac1-07cd-4bfc-bddb-85562ea67e3a",
+	"createdAt": "2022-06-03T13:51:00.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"fields": [
+		{
+			"id": "75d608b7-f49a-4790-e8c7-178beaf2ff3c",
+			"fieldName": "name",
+			"fieldType": "text",
+			"description": "Name"
+		},
+		{
+			"id": "82479dbf-67bf-4990-d482-9ef892bdd354",
+			"fieldName": "description",
+			"fieldType": "text",
+			"description": "Description",
+			"isNullable": true
+		},
+		{
+			"id": "3a9c54e2-2294-4852-f26e-29f4c75439f6",
+			"fieldName": "table",
+			"fieldType": "text",
+			"description": "SF Table",
+			"isNullable": true
+		},
+		{
+			"id": "8e72a813-1662-44ee-ed95-b99cae025734",
+			"fieldName": "metadata",
+			"fieldType": "json",
+			"description": "Metadata",
+			"isNullable": true
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "p9_sf_connector",
+	"description": "SalesForce Connector",
+	"ver": "22.11.23.613",
+	"enableAudit": false,
+	"includeDataInPackage": true,
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12",
+	"rolesRead": [],
+	"rolesWrite": []
+}

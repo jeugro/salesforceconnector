@@ -1,0 +1,9 @@
+modelpageModelsDetail.setData({
+    name: "",
+    description: "",
+    metadata: []
+});
+
+treeFields.collapseAll();
+
+oApp.to(pageModelsDetail);

@@ -1,0 +1,281 @@
+{
+	"id": "4ebf11a4-0a39-4396-8fd2-d6259f7873cb",
+	"createdAt": "2022-10-29T10:48:17.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"settings": {
+		"properties": {
+			"report": {
+				"showIcon": true,
+				"iconButtonClose": "",
+				"textButtonClose": "Close",
+				"typeButtonClose": "Transparent",
+				"iconButtonCreate": "",
+				"textButtonCreate": "Create",
+				"typeButtonCreate": "Emphasized",
+				"iconButtonExport": "sap-icon://excel-attachment",
+				"textButtonExport": "",
+				"typeButtonExport": "Transparent",
+				"iconButtonImport": "sap-icon://fa-solid/file-import",
+				"textButtonImport": "",
+				"typeButtonImport": "Transparent",
+				"iconButtonMultiSelect": "",
+				"textButtonMultiSelect": "MultiSelect",
+				"typeButtonMultiSelect": "Emphasized",
+				"iconButtonRun": "",
+				"textButtonRun": "Run",
+				"typeButtonRun": "Emphasized",
+				"enableRun": true,
+				"enableCreate": false,
+				"enableClose": true,
+				"enableDelete": false,
+				"enableExport": false,
+				"enableImport": false,
+				"enableMultiSelect": false,
+				"enableVariant": true,
+				"hideHeader": false,
+				"autoRun": true,
+				"autoRunFocus": false,
+				"searchLabel": "Search",
+				"searchPlaceholder": "",
+				"title": "Accounts",
+				"subTitle": "Salesforce",
+				"_navigationItemPress": {
+					"destinationType": "F",
+					"openAs": "P",
+					"butType": "Accept",
+					"destinationTargetF": "68820a6f-975c-4a2f-b9e2-be68c45184b9",
+					"keyField": [
+						{
+							"fieldName": "Id",
+							"key": "Id",
+							"value": ""
+						}
+					]
+				},
+				"actionButtonLeft": false
+			},
+			"form": {
+				"enableCompact": false,
+				"headerExpanded": true
+			},
+			"table": {
+				"enablePagination": true,
+				"paginationShowSelection": true,
+				"paginationRows": 25,
+				"action1Text": "",
+				"action1Type": "Transparent",
+				"action2Text": "",
+				"action2Type": "Transparent",
+				"action3Text": "",
+				"action3Type": "Transparent",
+				"showSeparators": "All",
+				"alternateRowColors": true,
+				"enableCompact": false,
+				"enableAction1": false,
+				"enableAction2": false,
+				"enableAction3": false,
+				"fixedLayout": true,
+				"inset": false,
+				"initialSortField": "LastModifiedDate",
+				"initialSortOrder": "DESC"
+			}
+		},
+		"fieldCatalog": [
+			{
+				"name": "AccountSource",
+				"label": "Account Source",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Account_Category__c",
+				"label": "Account Category",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Account_Number2__c",
+				"label": "Account Number",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Account_Status__c",
+				"label": "Account Status",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "BillingCountry",
+				"label": "Billing Country",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Id",
+				"label": "Account ID",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Industry",
+				"label": "Industry",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "IsDeleted",
+				"label": "Deleted",
+				"type": "boolean",
+				"usage": "BOTH"
+			},
+			{
+				"name": "LastModifiedDate",
+				"label": "Last Modified Date",
+				"type": "timestamp",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Name",
+				"label": "Account Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "NumberOfEmployees",
+				"label": "Employees",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Owner.Name",
+				"label": "Full Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Type",
+				"label": "Account Type",
+				"type": "string",
+				"usage": "BOTH"
+			}
+		],
+		"fieldsSel": [
+			{
+				"visible": true,
+				"name": "Name",
+				"text": "Account Name",
+				"fieldPos": 1
+			},
+			{
+				"visible": true,
+				"name": "Type",
+				"text": "Account Type",
+				"fieldPos": 2,
+				"type": "MultiSelect",
+				"default": " [\"Prospect Customer\", \"Partner Prospect\", \"Partner\", \"Customer\"]"
+			},
+			{
+				"visible": true,
+				"name": "Industry",
+				"text": "Industry",
+				"fieldPos": 3,
+				"type": "MultiSelect"
+			}
+		],
+		"fieldsRun": [
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Name",
+				"text": "Name",
+				"fieldPos": 4
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Account_Number2__c",
+				"text": "Number",
+				"fieldPos": 5
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Type",
+				"text": "Type",
+				"fieldPos": 6
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "BillingCountry",
+				"text": "Country",
+				"fieldPos": 7
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Industry",
+				"text": "Industry",
+				"fieldPos": 8
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": false,
+				"name": "Id",
+				"text": "Account ID",
+				"fieldPos": 9
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Owner.Name",
+				"text": "Owner",
+				"fieldPos": 10
+			},
+			{
+				"enableFilter": false,
+				"enableSort": true,
+				"visible": true,
+				"name": "LastModifiedDate",
+				"text": "Updated At",
+				"fieldPos": 11,
+				"formatter": "date01"
+			}
+		],
+		"defaultVariant": {
+			"id": "006585d8-6988-44bb-a0b7-29ee9e05c92e",
+			"colOrder": "key_a_to_z",
+			"rowOrder": "key_a_to_z",
+			"row": [],
+			"column": [],
+			"val": [],
+			"inclusions": {},
+			"exclusions": {}
+		}
+	},
+	"name": "salesforce_account_list",
+	"description": "",
+	"group": "",
+	"type": "C",
+	"connectorid": "b0be71cb-0c96-449d-83da-8d0c559ce946",
+	"scriptSel": null,
+	"scriptRun": null,
+	"tableid": null,
+	"ver": "22.11.23.831",
+	"disabled": false,
+	"appType": "A",
+	"application": "planet9_adaptive_list",
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12",
+	"roles": [],
+	"scriptSelObj": null,
+	"scriptRunObj": null,
+	"tableObj": null
+}

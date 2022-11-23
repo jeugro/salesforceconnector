@@ -1,0 +1,151 @@
+{
+	"id": "0807fd9a-4ed9-44af-bcd3-95d49776697b",
+	"createdAt": "2022-11-23T07:19:34.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"settings": {
+		"properties": {
+			"report": {
+				"splitter1Resizable": true,
+				"splitter2Resizable": true,
+				"splitter3Resizable": true,
+				"app1Resizable": true,
+				"app2Resizable": true,
+				"app3Resizable": true,
+				"app4Resizable": true,
+				"app5Resizable": true,
+				"app6Resizable": true,
+				"app7Resizable": true,
+				"app8Resizable": true,
+				"app9Resizable": true,
+				"_app1Nav": {
+					"destinationType": "F",
+					"openAs": "P",
+					"butType": "Accept",
+					"destinationTargetF": "be177749-c7c1-4837-9945-220776cfdb92",
+					"keyField": []
+				},
+				"_app2Nav": {
+					"destinationType": "F",
+					"openAs": "P",
+					"butType": "Accept",
+					"destinationTargetF": "75e618e4-ff4c-47fb-8b65-1947a0e127d7",
+					"keyField": []
+				},
+				"splitter1Width": "400px",
+				"_app4Nav": {
+					"destinationType": "F",
+					"openAs": "P",
+					"butType": "Accept",
+					"destinationTargetF": "91637069-6fe9-4257-b5df-acd9c4e75a18",
+					"keyField": []
+				},
+				"splitter2Width": "400px"
+			},
+			"form": {},
+			"table": {}
+		},
+		"fieldCatalog": [
+			{
+				"name": "AccountId",
+				"label": "Account ID",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Amount",
+				"label": "Amount",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "CurrencyIsoCode",
+				"label": "Opportunity Currency",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Description",
+				"label": "Description",
+				"type": "string",
+				"usage": "OUTPUT"
+			},
+			{
+				"name": "ForecastCategoryName",
+				"label": "Forecast Category",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Id",
+				"label": "Opportunity ID",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Name",
+				"label": "Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Owner.Name",
+				"label": "Full Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Owner.UserRole.Name",
+				"label": "Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Probability",
+				"label": "Probability (%)",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Reseller__r.Name",
+				"label": "Account Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "StageName",
+				"label": "Stage",
+				"type": "string",
+				"usage": "BOTH"
+			}
+		],
+		"fieldsSel": [],
+		"fieldsRun": [],
+		"defaultVariant": {
+			"id": "adfef978-2cd7-43f5-91b4-963638df531e",
+			"colOrder": "key_a_to_z",
+			"rowOrder": "key_a_to_z",
+			"row": [],
+			"column": [],
+			"val": [],
+			"inclusions": {},
+			"exclusions": {}
+		}
+	},
+	"name": "salesforce_kpi_tile",
+	"description": "",
+	"group": "",
+	"type": "C",
+	"connectorid": "9c0778ee-2d78-4a73-a762-90eeb883be98",
+	"scriptSel": null,
+	"scriptRun": null,
+	"tableid": null,
+	"ver": "22.11.23.829",
+	"disabled": false,
+	"appType": "A",
+	"application": "planet9_adaptive_splitter",
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12",
+	"roles": [],
+	"scriptSelObj": null,
+	"scriptRunObj": null,
+	"tableObj": null
+}

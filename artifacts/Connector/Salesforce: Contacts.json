@@ -1,0 +1,19 @@
+{
+	"id": "67994dc3-9951-4729-bde4-f8c3034ae721",
+	"createdAt": "2022-10-30T09:40:45.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"settings": {
+		"scriptSel": "5211fb19-2b9e-4b41-bf93-bc766ad4d52e",
+		"scriptRun": "feb6a33f-b6c0-4312-89b1-60226eb53aff",
+		"startParam": "ff2a6c05-dfcc-4e76-815e-e78030d5c6a5",
+		"hasDocumentation": false
+	},
+	"documentation": {},
+	"name": "Salesforce: Contacts",
+	"description": "Using Neptune Salesforce Connector",
+	"group": null,
+	"type": "S",
+	"ver": "22.11.23.613",
+	"disabled": false,
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12"
+}

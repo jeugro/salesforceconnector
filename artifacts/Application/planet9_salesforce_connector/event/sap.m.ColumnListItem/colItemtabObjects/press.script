@@ -1,0 +1,8 @@
+const context = oEvent.oSource.getBindingContext();
+const data = context.getObject();
+
+inpageModelsDetailFormtable.setValue(data.name);
+sfc.getFields(data.name);
+
+diaObjects.close();
+

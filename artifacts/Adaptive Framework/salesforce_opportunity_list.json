@@ -1,0 +1,268 @@
+{
+	"id": "45a8980f-6aa8-402a-90e3-d9d01188d128",
+	"createdAt": "2022-10-29T06:19:22.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"settings": {
+		"properties": {
+			"report": {
+				"showIcon": true,
+				"iconButtonClose": "",
+				"textButtonClose": "Close",
+				"typeButtonClose": "Transparent",
+				"iconButtonCreate": "",
+				"textButtonCreate": "Create",
+				"typeButtonCreate": "Emphasized",
+				"iconButtonExport": "sap-icon://excel-attachment",
+				"textButtonExport": "",
+				"typeButtonExport": "Transparent",
+				"iconButtonImport": "sap-icon://fa-solid/file-import",
+				"textButtonImport": "",
+				"typeButtonImport": "Transparent",
+				"iconButtonMultiSelect": "",
+				"textButtonMultiSelect": "MultiSelect",
+				"typeButtonMultiSelect": "Emphasized",
+				"iconButtonRun": "",
+				"textButtonRun": "Run",
+				"typeButtonRun": "Emphasized",
+				"enableRun": true,
+				"enableCreate": false,
+				"enableClose": true,
+				"enableDelete": false,
+				"enableExport": true,
+				"enableImport": false,
+				"enableMultiSelect": false,
+				"enableVariant": true,
+				"hideHeader": false,
+				"autoRun": false,
+				"autoRunFocus": false,
+				"searchLabel": "Search",
+				"searchPlaceholder": "",
+				"title": "Opportunity",
+				"actionButtonLeft": false
+			},
+			"form": {
+				"enableCompact": false,
+				"headerExpanded": true
+			},
+			"table": {
+				"enablePagination": true,
+				"paginationShowSelection": true,
+				"paginationRows": "25",
+				"action1Text": "",
+				"action1Type": "Transparent",
+				"action2Text": "",
+				"action2Type": "Transparent",
+				"action3Text": "",
+				"action3Type": "Transparent",
+				"showSeparators": "All",
+				"alternateRowColors": true,
+				"enableCompact": false,
+				"enableAction1": false,
+				"enableAction2": false,
+				"enableAction3": false,
+				"fixedLayout": false,
+				"inset": false,
+				"initialSortField": "",
+				"initialSortOrder": "DESC",
+				"postProcessingScript": null
+			}
+		},
+		"fieldCatalog": [
+			{
+				"name": "AccountId",
+				"label": "Account ID",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Amount",
+				"label": "Amount",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "CurrencyIsoCode",
+				"label": "Opportunity Currency",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Description",
+				"label": "Description",
+				"type": "string",
+				"usage": "OUTPUT"
+			},
+			{
+				"name": "ForecastCategoryName",
+				"label": "Forecast Category",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Id",
+				"label": "Opportunity ID",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Name",
+				"label": "Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Owner.Name",
+				"label": "Full Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Owner.UserRole.Name",
+				"label": "Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Probability",
+				"label": "Probability (%)",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Reseller__r.Name",
+				"label": "Account Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "StageName",
+				"label": "Stage",
+				"type": "string",
+				"usage": "BOTH"
+			}
+		],
+		"fieldsSel": [
+			{
+				"visible": true,
+				"name": "Name",
+				"text": "Name",
+				"fieldPos": 1
+			},
+			{
+				"visible": true,
+				"name": "AccountId",
+				"text": "Account ID",
+				"fieldPos": 2,
+				"type": "ValueHelp",
+				"_navigation": {
+					"destinationType": "F",
+					"openAs": "D",
+					"butType": "Accept",
+					"destinationTargetF": "4ebf11a4-0a39-4396-8fd2-d6259f7873cb",
+					"keyField": [],
+					"dialogHeight": "800px"
+				},
+				"valueRequestKey": "Id"
+			},
+			{
+				"visible": true,
+				"name": "StageName",
+				"text": "Stage",
+				"fieldPos": 3,
+				"type": "MultiSelect"
+			}
+		],
+		"fieldsRun": [
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Name",
+				"text": "Name",
+				"fieldPos": 4,
+				"wrapping": true
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "StageName",
+				"text": "Stage",
+				"fieldPos": 5
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Probability",
+				"text": "Probability",
+				"fieldPos": 6
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Amount",
+				"text": "Amount",
+				"fieldPos": 7,
+				"type": "ObjectNumber",
+				"numberUnitType": "Binding",
+				"numberUnitBinding": "CurrencyIsoCode",
+				"hAlign": "End",
+				"numberStateType": "",
+				"numberStateFixed": "Success",
+				"statusIconType": "",
+				"statusIconFixed": "sap-icon://accidental-leave",
+				"statusTitleType": "",
+				"statusTitleFixed": "Amoun",
+				"statusStateType": "Fixed",
+				"statusStateFixed": "Warning",
+				"width": "150px",
+				"formatter": "number01"
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": false,
+				"name": "CurrencyIsoCode",
+				"text": "Opportunity Currency",
+				"fieldPos": 8
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Owner.Name",
+				"text": "Full Name",
+				"fieldPos": 9
+			}
+		],
+		"defaultVariant": {
+			"id": "4288384b-112e-4bce-a5e8-8c9f27c1fbda",
+			"colOrder": "key_a_to_z",
+			"rowOrder": "key_a_to_z",
+			"row": [],
+			"column": [],
+			"val": [],
+			"inclusions": {},
+			"exclusions": {}
+		}
+	},
+	"name": "salesforce_opportunity_list",
+	"description": "",
+	"group": "",
+	"type": "C",
+	"connectorid": "9c0778ee-2d78-4a73-a762-90eeb883be98",
+	"scriptSel": null,
+	"scriptRun": null,
+	"tableid": null,
+	"ver": "22.11.23.74",
+	"disabled": false,
+	"appType": "A",
+	"application": "planet9_adaptive_list",
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12",
+	"roles": [],
+	"scriptSelObj": null,
+	"scriptRunObj": null,
+	"tableObj": null
+}

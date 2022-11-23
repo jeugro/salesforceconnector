@@ -1,0 +1,3 @@
+const context = oEvent.oSource.getBindingContext();
+const data = context.getObject();
+sfc.getDetail(data.id);

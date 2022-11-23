@@ -1,0 +1,34 @@
+{
+	"id": "feb6a33f-b6c0-4312-89b1-60226eb53aff",
+	"createdAt": "2022-06-04T06:10:36.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"globalScripts": [],
+	"externalModules": [],
+	"entitySets": [
+		{
+			"id": "0a8bfac1-07cd-4bfc-bddb-85562ea67e3a",
+			"name": "p9_sf_connector",
+			"contextname": "p9_sf_connector"
+		}
+	],
+	"apis": [
+		{
+			"id": "7641f0ef-4fec-48a2-9084-651b32a540ea",
+			"parent": "28abbaa4-5fbb-4e19-815f-0a6aa6bed859",
+			"name": "/services/data/v53.0/query",
+			"contextname": "query",
+			"method": "GET"
+		}
+	],
+	"name": "SalesforceAdaptiveRun",
+	"ver": "22.11.23.816",
+	"description": "Run Report",
+	"content": "file:///content.script",
+	"useAsGlobalScript": false,
+	"transpiledContent": null,
+	"lastRunSuccessful": true,
+	"isTypescript": false,
+	"language": "javascript",
+	"jsscriptGroup": "8724ce1d-db36-43cb-a923-3e0be5432b2a",
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12"
+}

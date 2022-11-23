@@ -1,0 +1,71 @@
+*,
+label,
+::after,
+::before {
+    box-sizing: content-box;
+    line-height: inherit;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+html.sap-desktop .sapFDynamicPageTitle.sapFDynamicPageTitleFocus {
+    outline: none;
+}
+
+.sapFDynamicPageTitle {
+    padding: 0.5rem 0.5rem 0.5rem 1.2rem;
+}
+
+.sapMScrollContScroll {
+    height: calc(100% - 120px);
+}
+
+.sapUiTableHeaderDataCell .sapMText,
+.sapMColumnHeader .sapMText {
+    color: var(--nepHighlightColor);
+}
+
+.sapMPanel .sapMPanelWrappingDiv:not(.sapMPanelWrappingDivExpanded),
+.sapMPanel .sapMPanelWrappingDivTb:not(.sapMPanelWrappingDivTbExpanded) {
+    border-radius: 0;
+}
+
+span.sapMBtnInner.sapMBtnEmphasized {
+    border-color: transparent;
+}
+
+.sapMITBContent {
+    border-bottom: none;
+}
+
+.sun-editor-editable {
+    font-family: "72", "72full";
+    font-size: 14px;
+}
+
+.previewContent .sapMPanelContent {
+    overflow: hidden;
+    border: 6px dashed #e5e5e5;
+}
+
+.previewIcon .sapMPanelContent {
+    border: none;
+}
+
+.nepNoScroll .sapMPanelContent {
+    overflow: hidden;
+}
+
+.nepBarStretch {
+    top: 130px;
+}
+
+.nepThumbnail {
+    margin-top: 5px;
+}
+
+.nepToolbarNoRadius {
+    border-radius: 0;
+}

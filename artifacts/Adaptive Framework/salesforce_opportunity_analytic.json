@@ -1,0 +1,265 @@
+{
+	"id": "9b82ac3e-e08b-4c3b-ba3a-e2b573bc8b7c",
+	"createdAt": "2022-10-29T11:02:36.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"settings": {
+		"properties": {
+			"report": {
+				"iconButtonClose": "",
+				"textButtonClose": "Close",
+				"typeButtonClose": "Transparent",
+				"enableValues": true,
+				"enableLeftPanel": true,
+				"enableRightPanel": true,
+				"enableVariant": true,
+				"showLeftPanel": true,
+				"showRightPanel": true,
+				"enableClose": true,
+				"autoRun": false,
+				"title": "Opportunities"
+			},
+			"form": {},
+			"table": {
+				"showRowTotal": true,
+				"showColTotal": true,
+				"postProcessingScript": "0b2aaf40-30ae-45b9-b888-d22475e711e8"
+			}
+		},
+		"fieldCatalog": [
+			{
+				"name": "AccountId",
+				"label": "Account ID",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Amount",
+				"label": "Amount",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "CurrencyIsoCode",
+				"label": "Opportunity Currency",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Description",
+				"label": "Description",
+				"type": "string",
+				"usage": "OUTPUT"
+			},
+			{
+				"name": "ForecastCategoryName",
+				"label": "Forecast Category",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Id",
+				"label": "Opportunity ID",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Name",
+				"label": "Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Owner.Name",
+				"label": "Full Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Owner.UserRole.Name",
+				"label": "Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Probability",
+				"label": "Probability (%)",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Reseller__r.Name",
+				"label": "Account Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "StageName",
+				"label": "Stage",
+				"type": "string",
+				"usage": "BOTH"
+			}
+		],
+		"fieldsSel": [
+			{
+				"visible": true,
+				"name": "StageName",
+				"text": "Stage",
+				"fieldPos": 1,
+				"type": "MultiSelect",
+				"columnLabel": "Selection",
+				"default": "[\"4. Stage - Decision Makers involved\",\"5. Stage - in confirmation process\",\"6. Stage - Quote sent/ Price Confirmed\",\"7. Stage - PO confirmed\"]"
+			}
+		],
+		"fieldsRun": [
+			{
+				"filter": true,
+				"name": "Name",
+				"text": "Opportunity Name",
+				"fieldPos": 2
+			},
+			{
+				"filter": true,
+				"name": "CurrencyIsoCode",
+				"text": "Opportunity Currency",
+				"fieldPos": 3
+			},
+			{
+				"filter": false,
+				"name": "Amount",
+				"text": "Amount",
+				"fieldPos": 4
+			},
+			{
+				"filter": true,
+				"name": "StageName",
+				"text": "Stage",
+				"fieldPos": 5
+			},
+			{
+				"filter": true,
+				"name": "Probability",
+				"text": "Probability (%)",
+				"fieldPos": 6
+			},
+			{
+				"filter": true,
+				"name": "Owner.Name",
+				"text": "Owner",
+				"fieldPos": 7
+			},
+			{
+				"filter": true,
+				"name": "Owner.UserRole.Name",
+				"text": "Role",
+				"fieldPos": 8
+			},
+			{
+				"filter": true,
+				"name": "Description",
+				"text": "Opportunity Description",
+				"fieldPos": 9
+			}
+		],
+		"defaultVariant": {
+			"id": "8e351424-1c9f-4db9-eb44-a341083ee790",
+			"colOrder": "value_z_to_a",
+			"rowOrder": "key_a_to_z",
+			"row": [
+				{
+					"filter": true,
+					"name": "Owner.UserRole.Name",
+					"text": "Role",
+					"fieldPos": 8,
+					"items": [],
+					"visible": false,
+					"filterType": "Transparent"
+				}
+			],
+			"column": [
+				{
+					"filter": true,
+					"name": "StageName",
+					"text": "Stage",
+					"fieldPos": 16,
+					"items": [
+						{
+							"key": "1. Stage - positive towards Neptune",
+							"text": "1. Stage - positive towards Neptune"
+						},
+						{
+							"key": "2. Stage - demo/talks",
+							"text": "2. Stage - demo/talks"
+						},
+						{
+							"key": "3. Stage - work in progress",
+							"text": "3. Stage - work in progress"
+						},
+						{
+							"key": "4. Stage - Decision Makers involved",
+							"text": "4. Stage - Decision Makers involved"
+						},
+						{
+							"key": "5. Stage - in confirmation process",
+							"text": "5. Stage - in confirmation process"
+						},
+						{
+							"key": "6. Stage - Quote sent/ Price Confirmed",
+							"text": "6. Stage - Quote sent/ Price Confirmed"
+						},
+						{
+							"key": "7. Stage - PO confirmed",
+							"text": "7. Stage - PO confirmed"
+						},
+						{
+							"key": "FINAL - closed / signed",
+							"text": "FINAL - closed / signed"
+						},
+						{
+							"key": "LOST",
+							"text": "LOST"
+						},
+						{
+							"key": "Postponed / On Hold",
+							"text": "Postponed / On Hold"
+						}
+					],
+					"visible": false,
+					"filterType": "Transparent"
+				}
+			],
+			"val": [
+				{
+					"filter": false,
+					"name": "Amount",
+					"text": "Amount",
+					"fieldPos": 5,
+					"items": [],
+					"visible": false,
+					"filterType": "Transparent"
+				}
+			],
+			"inclusions": {},
+			"exclusions": {},
+			"rendererName": "Table",
+			"aggregatorName": "Integer Sum"
+		},
+		"id": "9b82ac3e-e08b-4c3b-ba3a-e2b573bc8b7c"
+	},
+	"name": "salesforce_opportunity_analytic",
+	"description": "",
+	"group": "",
+	"type": "C",
+	"connectorid": "9c0778ee-2d78-4a73-a762-90eeb883be98",
+	"scriptSel": null,
+	"scriptRun": null,
+	"tableid": null,
+	"ver": "22.11.23.817",
+	"disabled": false,
+	"appType": "A",
+	"application": "planet9_adaptive_bi",
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12",
+	"roles": [],
+	"scriptSelObj": null,
+	"scriptRunObj": null,
+	"tableObj": null
+}
