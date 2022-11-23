@@ -8,4 +8,15 @@ After installing this repo, do these changes
 - Change Endpoint from "https://neptune-software.my.salesforce.com" to your SalesForce endpoint
 
 
-When defining a Connector in Open Edition, set StartParameters to the ID of the SalesForce Connector
+# Create new Salesforce Connector
+Start the Application /app/planet9_salesforce_connector
+
+When defining a Connector (from the Cockpit) in Open Edition, use the following setup:
+
+1) Use type Server Script 
+
+        Setup (Selection & Fields): (SalesForceConnector) SalesforceAdaptiveRun
+
+        Run: (SalesForceConnector) SalesforceAdaptiveRun
+
+        Set StartParameters to the ID of the SalesForce Connector

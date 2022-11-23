@@ -9,7 +9,7 @@
 	},
 	"name": "com.neptune.salesforce.connector",
 	"description": "SalesForce Connector for Adaptive Framework",
-	"ver": "22.10.31.166",
+	"ver": "22.11.23.929",
 	"enableCICD": true,
 	"apps": [
 		{
