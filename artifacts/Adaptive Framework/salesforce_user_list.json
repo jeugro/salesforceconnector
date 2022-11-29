@@ -1,0 +1,247 @@
+{
+	"id": "1dad1352-f1c6-4c41-9918-b3b6dbb8f42b",
+	"createdAt": "2022-10-29T12:35:58.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"settings": {
+		"properties": {
+			"report": {
+				"showIcon": true,
+				"iconButtonClose": "",
+				"textButtonClose": "Close",
+				"typeButtonClose": "Transparent",
+				"iconButtonCreate": "",
+				"textButtonCreate": "Create",
+				"typeButtonCreate": "Emphasized",
+				"iconButtonExport": "sap-icon://excel-attachment",
+				"textButtonExport": "",
+				"typeButtonExport": "Transparent",
+				"iconButtonImport": "sap-icon://fa-solid/file-import",
+				"textButtonImport": "",
+				"typeButtonImport": "Transparent",
+				"iconButtonMultiSelect": "",
+				"textButtonMultiSelect": "MultiSelect",
+				"typeButtonMultiSelect": "Emphasized",
+				"iconButtonRun": "",
+				"textButtonRun": "Update",
+				"typeButtonRun": "Emphasized",
+				"enableRun": true,
+				"enableCreate": false,
+				"enableClose": true,
+				"enableDelete": false,
+				"enableExport": false,
+				"enableImport": false,
+				"enableMultiSelect": false,
+				"enableVariant": false,
+				"hideHeader": false,
+				"autoRun": true,
+				"autoRunFocus": false,
+				"searchLabel": "Search",
+				"searchPlaceholder": "",
+				"title": "Users",
+				"avatarIcon": "sap-icon://tnt/User",
+				"actionButtonLeft": false
+			},
+			"form": {
+				"enableCompact": true,
+				"headerExpanded": true
+			},
+			"table": {
+				"enablePagination": true,
+				"paginationShowSelection": true,
+				"paginationRows": "25",
+				"action1Text": "",
+				"action1Type": "Transparent",
+				"action2Text": "",
+				"action2Type": "Transparent",
+				"action3Text": "",
+				"action3Type": "Transparent",
+				"showSeparators": "All",
+				"alternateRowColors": true,
+				"enableCompact": true,
+				"enableAction1": false,
+				"enableAction2": false,
+				"enableAction3": false,
+				"fixedLayout": false,
+				"inset": false,
+				"initialSortField": "Name",
+				"initialSortOrder": "ASC"
+			}
+		},
+		"fieldCatalog": [
+			{
+				"name": "City",
+				"label": "City",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Country",
+				"label": "Country",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Department",
+				"label": "Department",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Email",
+				"label": "Email",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Id",
+				"label": "User ID",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "IsActive",
+				"label": "Active",
+				"type": "boolean",
+				"usage": "BOTH"
+			},
+			{
+				"name": "LastLoginDate",
+				"label": "Last Login",
+				"type": "timestamp",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Name",
+				"label": "Full Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Title",
+				"label": "Title",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "UserRole.Name",
+				"label": "Name",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "UserType",
+				"label": "User Type",
+				"type": "string",
+				"usage": "BOTH"
+			},
+			{
+				"name": "Username",
+				"label": "Username",
+				"type": "string",
+				"usage": "BOTH"
+			}
+		],
+		"fieldsSel": [
+			{
+				"visible": false,
+				"name": "IsActive",
+				"text": "Active",
+				"fieldPos": 1,
+				"type": "CheckBox",
+				"default": "true"
+			},
+			{
+				"visible": true,
+				"name": "Name",
+				"text": "Name",
+				"fieldPos": 2
+			}
+		],
+		"fieldsRun": [
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": false,
+				"name": "Id",
+				"text": "User ID",
+				"fieldPos": 3
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Name",
+				"text": "Full Name",
+				"fieldPos": 4
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Department",
+				"text": "Department",
+				"fieldPos": 5
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Country",
+				"text": "Country",
+				"fieldPos": 6
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "Email",
+				"text": "Email",
+				"fieldPos": 7
+			},
+			{
+				"enableFilter": true,
+				"enableSort": true,
+				"visible": true,
+				"name": "UserRole.Name",
+				"text": "Role",
+				"fieldPos": 8
+			},
+			{
+				"enableFilter": false,
+				"enableSort": true,
+				"visible": true,
+				"name": "LastLoginDate",
+				"text": "Last Login",
+				"fieldPos": 9,
+				"formatter": "date01"
+			}
+		],
+		"defaultVariant": {
+			"id": "3251f828-c7b4-409e-c1b0-2f7243ed5264",
+			"colOrder": "key_a_to_z",
+			"rowOrder": "key_a_to_z",
+			"row": [],
+			"column": [],
+			"val": [],
+			"inclusions": {},
+			"exclusions": {}
+		}
+	},
+	"name": "salesforce_user_list",
+	"description": "",
+	"group": "",
+	"type": "C",
+	"connectorid": "8b9c9863-9f11-4294-9f89-af3ee8b8c061",
+	"scriptSel": null,
+	"scriptRun": null,
+	"tableid": null,
+	"ver": "22.11.23.71",
+	"disabled": false,
+	"appType": "A",
+	"application": "planet9_adaptive_list",
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12",
+	"roles": [],
+	"scriptSelObj": null,
+	"scriptRunObj": null,
+	"tableObj": null
+}

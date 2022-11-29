@@ -9,7 +9,7 @@
 	},
 	"name": "com.neptune.salesforce.connector",
 	"description": "SalesForce Connector for Adaptive Framework",
-	"ver": "22.10.31.166",
+	"ver": "22.11.23.929",
 	"enableCICD": true,
 	"apps": [
 		{
@@ -89,7 +89,74 @@
 	"theme": [],
 	"pdf": [],
 	"rulesengine": [],
-	"reports": [],
+	"reports": [
+		{
+			"id": "fbc114af-eec0-4222-9f4c-52053a606ddc",
+			"name": "salesforce_account_contacts_child",
+			"description": "",
+			"application": "planet9_adaptive_list"
+		},
+		{
+			"id": "be177749-c7c1-4837-9945-220776cfdb92",
+			"name": "salesforce_opportunity_kpi_stages",
+			"description": "",
+			"application": "planet9_adaptive_tile_chart"
+		},
+		{
+			"id": "9b82ac3e-e08b-4c3b-ba3a-e2b573bc8b7c",
+			"name": "salesforce_opportunity_analytic",
+			"description": "",
+			"application": "planet9_adaptive_bi"
+		},
+		{
+			"id": "91637069-6fe9-4257-b5df-acd9c4e75a18",
+			"name": "salesforce_opportunity_kpi_created_industry",
+			"description": "",
+			"application": "planet9_adaptive_tile_chart"
+		},
+		{
+			"id": "75e618e4-ff4c-47fb-8b65-1947a0e127d7",
+			"name": "salesforce_opportunity_kpi_owners",
+			"description": "",
+			"application": "planet9_adaptive_tile_chart"
+		},
+		{
+			"id": "68820a6f-975c-4a2f-b9e2-be68c45184b9",
+			"name": "salesforce_account_detail",
+			"description": "",
+			"application": "planet9_adaptive_edit"
+		},
+		{
+			"id": "4ebf11a4-0a39-4396-8fd2-d6259f7873cb",
+			"name": "salesforce_account_list",
+			"description": "",
+			"application": "planet9_adaptive_list"
+		},
+		{
+			"id": "4c153615-9aed-48fe-b3b9-059e1f6121b8",
+			"name": "salesforce_opportunity_child",
+			"description": "",
+			"application": "planet9_adaptive_list"
+		},
+		{
+			"id": "45a8980f-6aa8-402a-90e3-d9d01188d128",
+			"name": "salesforce_opportunity_list",
+			"description": "",
+			"application": "planet9_adaptive_list"
+		},
+		{
+			"id": "1dad1352-f1c6-4c41-9918-b3b6dbb8f42b",
+			"name": "salesforce_user_list",
+			"description": "",
+			"application": "planet9_adaptive_list"
+		},
+		{
+			"id": "0807fd9a-4ed9-44af-bcd3-95d49776697b",
+			"name": "salesforce_kpi_tile",
+			"description": "",
+			"application": "planet9_adaptive_splitter"
+		}
+	],
 	"api_authentication": [],
 	"api_group": [
 		{
@@ -98,9 +165,31 @@
 			"description": "SalesForce Connector"
 		}
 	],
-	"tile": [],
+	"tile": [
+		{
+			"id": "b0ce02f8-062a-4726-9219-915e3db1882f",
+			"description": null,
+			"name": "Salesforce: Users"
+		},
+		{
+			"id": "9edea199-8c30-400e-bbae-37b73efefb9b",
+			"description": null,
+			"name": "Salesforce: Account "
+		},
+		{
+			"id": "05cdea27-078f-40b9-acde-dbeca61a3b2a",
+			"description": null,
+			"name": "Salesforce: Pipeline"
+		}
+	],
 	"category": [],
-	"launchpad": [],
+	"launchpad": [
+		{
+			"id": "5e3254c9-0c71-4ca5-bc07-7e6f182d7f95",
+			"name": "Salesforce",
+			"description": "Salesforce Showcase"
+		}
+	],
 	"certificates": [],
 	"role": [],
 	"systems": [],
@@ -109,6 +198,27 @@
 	"department": [],
 	"script_scheduler": [],
 	"wf_definition": [],
-	"connector": [],
+	"connector": [
+		{
+			"id": "b0be71cb-0c96-449d-83da-8d0c559ce946",
+			"name": "Salesforce: Accounts",
+			"description": "Using Neptune Salesforce Connector"
+		},
+		{
+			"id": "9c0778ee-2d78-4a73-a762-90eeb883be98",
+			"name": "Salesforce: Opportunity",
+			"description": "Using Neptune Salesforce Connector"
+		},
+		{
+			"id": "8b9c9863-9f11-4294-9f89-af3ee8b8c061",
+			"name": "Salesforce: User",
+			"description": "Using Neptune Salesforce Connector"
+		},
+		{
+			"id": "67994dc3-9951-4729-bde4-f8c3034ae721",
+			"name": "Salesforce: Contacts",
+			"description": "Using Neptune Salesforce Connector"
+		}
+	],
 	"events": []
 }

@@ -1,0 +1,4 @@
+if (xhr.responseJSON && xhr.responseJSON.sobjects) {
+    modeltabObjects.setData(xhr.responseJSON.sobjects);
+    diaObjects.setTitle("SalesForce Objects (" + xhr.responseJSON.sobjects.length + ")");
+}

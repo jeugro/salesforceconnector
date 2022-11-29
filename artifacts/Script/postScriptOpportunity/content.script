@@ -1,0 +1,12 @@
+if (req.body && req.body.result) {
+
+    req.body.result.forEach(function (row) {
+        if (row.CurrencyIsoCode === "NOK") {
+            row.Amount = row.Amount / 10;
+            row.CurrencyIsoCode = "EUR";
+        }
+    });
+
+}
+
+complete();

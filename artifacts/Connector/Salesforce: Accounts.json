@@ -1,0 +1,19 @@
+{
+	"id": "b0be71cb-0c96-449d-83da-8d0c559ce946",
+	"createdAt": "2022-06-04T06:12:46.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"settings": {
+		"scriptSel": "5211fb19-2b9e-4b41-bf93-bc766ad4d52e",
+		"scriptRun": "feb6a33f-b6c0-4312-89b1-60226eb53aff",
+		"startParam": "6aa7ab94-1dd3-403f-bce5-c6dfbca23b36",
+		"hasDocumentation": false
+	},
+	"documentation": {},
+	"name": "Salesforce: Accounts",
+	"description": "Using Neptune Salesforce Connector",
+	"group": null,
+	"type": "S",
+	"ver": "22.11.23.613",
+	"disabled": false,
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12"
+}

@@ -1,0 +1,26 @@
+{
+	"id": "5211fb19-2b9e-4b41-bf93-bc766ad4d52e",
+	"createdAt": "2022-06-04T06:07:42.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"globalScripts": [],
+	"externalModules": [],
+	"entitySets": [
+		{
+			"id": "0a8bfac1-07cd-4bfc-bddb-85562ea67e3a",
+			"name": "p9_sf_connector",
+			"contextname": "p9_sf_connector"
+		}
+	],
+	"apis": [],
+	"name": "SalesforceAdaptiveSetup",
+	"ver": "22.11.23.648",
+	"description": "Get FieldCatalog",
+	"content": "file:///content.script",
+	"useAsGlobalScript": false,
+	"transpiledContent": null,
+	"lastRunSuccessful": true,
+	"isTypescript": false,
+	"language": "javascript",
+	"jsscriptGroup": "8724ce1d-db36-43cb-a923-3e0be5432b2a",
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12"
+}

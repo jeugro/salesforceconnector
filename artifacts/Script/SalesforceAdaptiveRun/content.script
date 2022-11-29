@@ -1,0 +1,339 @@
+let runMode = ((req.body._keyField) ? "Form" : "List");
+let selectedFields = [];
+let counter = 0;
+let pagination = "";
+let queryData = "";
+let order = "";
+let where = "";
+let whereSep = "";
+let fields = "";
+let sep = "";
+
+try {
+
+    // Get Connector Data
+    const connector = await entities.p9_sf_connector.findOne({
+        select: ["table", "metadata"],
+        where: { id: req.body._connector.settings.startParam }
+    });
+
+    if (!connector) return complete();
+
+    // Get all selected fields
+    await getFields(connector.metadata.children);
+
+    //  Fields Selection 
+    if (runMode == "Form") {
+
+        if (req.body._settings.fieldsSel) {
+
+            req.body._settings.fieldsSel.forEach(function (field) {
+                fields += sep + field.name;
+                sep = ",";
+            });
+
+        }
+
+        // Where 
+        req.body._keyField.forEach(function (keyField) {
+            where += whereSep + keyField.fieldName + " = '" + req.body[keyField.fieldName] + "'";
+            whereSep = " AND ";
+        });
+
+    } else {
+
+        // Selected Fields
+        if (req.body._settings.fieldsRun) {
+            req.body._settings.fieldsRun.forEach(function (field) {
+                fields += sep + field.name;
+                sep = ",";
+            });
+        }
+
+        // Where 
+        const bodyFields = Object.keys(req.body);
+
+        bodyFields.forEach(function (fieldName) {
+
+            if (fieldName.substr(0, 1) !== "_") {
+
+                const fieldValue = req.body[fieldName];
+                if (!fieldValue) return;
+
+                const fieldSel = req.body._settings.fieldsSel.find((f) => f.name === fieldName);
+                if (!fieldSel) return;
+
+                let fieldMeta = selectedFields.find((f) => f.name === fieldName);
+                if (!fieldMeta) fieldMeta = {};
+
+                switch (fieldSel.type) {
+
+                    case "CheckBox":
+                    case "Switch":
+                        where += whereSep + " " + fieldName + " = " + fieldValue;
+                        whereSep = " AND ";
+                        break;
+
+                    case "DateRange":
+                        where += whereSep + " " + fieldName + " >= " + fieldValue;
+                        whereSep = " AND ";
+                        where += whereSep + " " + fieldName + " <= " + req.body[fieldName + "_end"];
+                        whereSep = " AND ";
+                        break;
+
+                    case "SingleSelect":
+                    case "SingleSelectLookup":
+                    case "SingleSelectScript":
+                        if (fieldMeta.type === "datetime") {
+                            where += whereSep + " " + fieldName + " = " + fieldValue;
+                        } else {
+                            where += whereSep + " " + fieldName + " = '" + fieldValue + "'";
+                        }
+                        whereSep = " AND ";
+                        break;
+
+                    case "MultiSelect":
+                    case "MultiSelectLookup":
+                    case "MultiSelectScript":
+                        let includes = "";
+                        let sep = "";
+
+                        fieldValue.forEach(function (value) {
+                            includes += sep + "'" + value + "'";
+                            sep = ",";
+                        });
+
+                        if (includes) {
+                            where += whereSep + " " + fieldName + " IN (" + includes + ")";
+                            whereSep = " AND ";
+                        }
+                        break;
+
+                    default:
+                        if (fieldMeta.type === "id" || fieldMeta.type === "reference") {
+                            where += whereSep + " " + fieldName + " = '" + fieldValue + "'";
+                        } else if (fieldMeta.type === "boolean") {
+                            where += whereSep + " " + fieldName + " = " + fieldValue;
+                        } else {
+                            where += whereSep + " " + fieldName + " LIKE '%" + fieldValue + "%'";
+                        }
+                        whereSep = " AND ";
+                        break;
+
+                }
+
+            }
+
+        });
+
+    }
+
+    // API Query - Order
+    if (req.body._order) {
+
+        const orderField = Object.keys(req.body._order)[0];
+
+        if (orderField) {
+            const orderType = req.body._order[orderField];
+            order += " ORDER BY " + orderField + " " + orderType;
+        }
+
+    }
+
+    // API Query - Pagination
+    if (req.body._pagination) {
+
+        let queryCount = "SELECT count() FROM " + connector.table;
+        if (where) queryCount += " WHERE " + where;
+
+        const responseCount = await apis.query({ parameters: { "q": queryCount } });
+        if (responseCount && responseCount.data && responseCount.data.totalSize) counter = responseCount.data.totalSize;
+
+        pagination += " LIMIT " + req.body._pagination.take;
+        pagination += " OFFSET " + req.body._pagination.skip;
+
+    }
+
+    // API Query - Build
+    queryData = "SELECT " + fields + " FROM " + connector.table;
+
+    if (where) queryData += " WHERE " + where;
+    if (order) queryData += order;
+    if (pagination) queryData += pagination;
+
+    const responseRecords = await apis.query({ parameters: { "q": queryData } });
+
+    // Merge LookupFields from SalesForce
+    let fieldCatalog;
+
+    if (runMode == "Form") {
+        fieldCatalog = req.body._settings.fieldsSel;
+    } else {
+        fieldCatalog = req.body._settings.fieldsRun;
+    }
+
+    if (responseRecords && responseRecords.data && responseRecords.data.records) {
+
+        responseRecords.data.records.forEach(function (row) {
+
+            delete row["attributes"];
+
+            // Populate Data
+            fieldCatalog.forEach(function (field) {
+
+                if (field.name.indexOf(".") > -1) {
+
+                    const lookupData = field.name.split(".");
+
+                    switch (lookupData.length) {
+                        case 5:
+                            row[field.name] = row[lookupData[0]][lookupData[1]][lookupData[2]][lookupData[3]][lookupData[4]];
+                            break;
+                        case 4:
+                            row[field.name] = row[lookupData[0]][lookupData[1]][lookupData[2]][lookupData[3]];
+                            break;
+                        case 3:
+                            row[field.name] = row[lookupData[0]][lookupData[1]][lookupData[2]];
+                            break;
+                        case 2:
+                            row[field.name] = row[lookupData[0]][lookupData[1]];
+                            break;
+                        default:
+                            row[field.name] = "";
+                            break;
+                    }
+
+                }
+
+                if (row[field.name] === null) row[field.name] = "";
+            });
+
+            // Cleanup Data
+            fieldCatalog.forEach(function (field) {
+                if (field.name.indexOf(".") > -1) {
+                    const lookupData = field.name.split(".");
+                    delete row[lookupData[0]]
+                }
+            });
+
+            rowFields = Object.keys(row);
+
+            // Adaptive Framework Binding 
+            rowFields.forEach(function (fieldName) {
+
+                const fieldRun = req.body._settings.fieldsRun.find((f) => f.name === fieldName);
+
+                if (fieldRun) {
+
+                    switch (fieldRun.type) {
+
+                        case "ObjectStatus":
+
+                            // Unit
+                            if (fieldRun.statusUnitType === "Binding") row[fieldName + "_unit"] = row[fieldRun.statusUnitBinding];
+                            if (fieldRun.statusUnitType === "Fixed") row[fieldName + "_unit"] = fieldRun.statusUnitFixed;
+
+                            // State
+                            if (fieldRun.statusStateType === "Binding") row[fieldName + "_state"] = row[fieldRun.statusStateBinding];
+                            if (fieldRun.statusStateType === "Fixed") row[fieldName + "_state"] = fieldRun.statusStateFixed;
+
+                            // Icon
+                            if (fieldRun.statusIconType === "Binding") row[fieldName + "_icon"] = row[fieldRun.statusIconBinding];
+                            if (fieldRun.statusIconType === "Fixed") row[fieldName + "_icon"] = fieldRun.statusIconFixed;
+
+                            // Title
+                            if (fieldRun.statusTitleType === "Binding") row[fieldName + "_title"] = row[fieldRun.statusTitleBinding];
+                            if (fieldRun.statusTitleType === "Fixed") row[fieldName + "_title"] = fieldRun.statusTitleFixed;
+
+                            break;
+
+                        case "ObjectNumber":
+
+                            // Unit
+                            if (fieldRun.numberUnitType === "Binding") row[fieldName + "_unit"] = row[fieldRun.numberUnitBinding];
+                            if (fieldRun.numberUnitType === "Fixed") row[fieldName + "_unit"] = fieldRun.numberUnitFixed;
+
+                            // State
+                            if (fieldRun.numberStateType === "Binding") row[fieldName + "_state"] = row[fieldRun.numberStateBinding];
+                            if (fieldRun.numberStateType === "Fixed") row[fieldName + "_state"] = fieldRun.numberStateFixed;
+
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            });
+
+
+        });
+
+    }
+
+    // Send Response to Client
+    if (runMode == "Form") {
+
+        result.data = responseRecords.data.records;
+
+    } else {
+
+        if (!req.body._pagination) counter = responseRecords.data.records.length;
+
+        result.data = {
+            result: responseRecords.data.records || [],
+            count: counter,
+            debug: {
+                queryData,
+                settings: req.body._settings,
+                selectedFields
+            }
+        }
+
+    }
+
+    complete();
+
+} catch (e) {
+
+    let message = {
+        type: "error",
+        text: ""
+    }
+
+    if (e && e.message) message.text = e.message;
+
+    result.data = {
+        status: "ERROR",
+        message: message,
+        event: e,
+        debug: {
+            queryData,
+            settings: req.body._settings,
+            selectedFields
+        }
+    }
+
+    complete();
+
+}
+
+
+async function getFields(fields) {
+
+    fields.forEach(async function (field) {
+
+        if (field._selected) {
+            selectedFields.push({
+                name: field.name,
+                label: field.label,
+                type: field.type
+            });
+        }
+
+        // Child Fields
+        if (field.children) await getFields(field.children);
+
+    })
+
+
+}

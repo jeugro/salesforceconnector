@@ -1,0 +1,26 @@
+{
+	"id": "cc17fcfd-400e-4689-95d6-23773722ac64",
+	"createdAt": "2022-06-04T04:19:11.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"globalScripts": [],
+	"externalModules": [],
+	"entitySets": [
+		{
+			"id": "0a8bfac1-07cd-4bfc-bddb-85562ea67e3a",
+			"name": "p9_sf_connector",
+			"contextname": "p9_sf_connector"
+		}
+	],
+	"apis": [],
+	"name": "ClientList",
+	"ver": "22.10.31.1040",
+	"description": "List Connectors",
+	"content": "file:///content.script",
+	"useAsGlobalScript": false,
+	"transpiledContent": null,
+	"lastRunSuccessful": true,
+	"isTypescript": false,
+	"language": "javascript",
+	"jsscriptGroup": "8724ce1d-db36-43cb-a923-3e0be5432b2a",
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12"
+}

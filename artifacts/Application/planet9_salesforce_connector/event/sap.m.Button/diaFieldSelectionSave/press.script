@@ -1,0 +1,14 @@
+const selectedItems = ModelData.Find(modeltabFieldSelection.oData, "selected", true);
+let sep = "";
+
+sfc.referenceData.lookupField = "";
+
+selectedItems.forEach(function (field) {
+    sfc.referenceData.lookupField += sep + field.name;
+    sep = ",";
+});
+
+console.log(sfc.referenceData.lookupField);
+modelpageModelsDetail.refresh();
+
+diaFieldSelection.close();

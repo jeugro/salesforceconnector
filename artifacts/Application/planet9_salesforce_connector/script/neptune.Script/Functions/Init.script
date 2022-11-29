@@ -1,0 +1,17 @@
+jQuery.sap.require("sap.ui.core.format.DateFormat")
+jQuery.sap.require("sap.ui.core.format.NumberFormat");
+jQuery.sap.require("sap.ui.core.format.FileSizeFormat");
+jQuery.sap.require('sap.ui.layout.cssgrid.GridBoxLayout');
+jQuery.sap.require('sap.m.MessageBox');
+
+// TNT Icons
+sap.ui.core.IconPool.registerFont({
+    collectionName: "tnt",
+    fontFamily: "SAP-icons-TNT",
+    fontURI: sap.ui.require.toUrl("sap/tnt/themes/base/fonts"),
+    lazy: false
+});
+
+sap.ui.getCore().attachInit(function () {
+    modelpageModelsDetail.setSizeLimit(5000);
+})

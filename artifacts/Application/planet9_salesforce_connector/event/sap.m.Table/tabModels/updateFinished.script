@@ -1,0 +1,2 @@
+let binding = tabModels.getBinding('items');
+oPageModelsListNumber.setNumber("(" + binding.getLength() + ")");

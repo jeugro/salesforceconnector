@@ -1,0 +1,3 @@
+const data = oEvent.mParameters.itemContext.getObject(); 
+if (data.children.length === 1) sfc.getChildren(data);
+

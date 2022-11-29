@@ -1,0 +1,26 @@
+{
+	"id": "8a1c38ef-fbcc-412a-be0a-c1306ce0e3be",
+	"createdAt": "2022-10-29T06:06:42.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"globalScripts": [],
+	"externalModules": [],
+	"entitySets": [
+		{
+			"id": "0a8bfac1-07cd-4bfc-bddb-85562ea67e3a",
+			"name": "p9_sf_connector",
+			"contextname": "p9_sf_connector"
+		}
+	],
+	"apis": [],
+	"name": "ClientDelete",
+	"ver": "22.10.31.1039",
+	"description": null,
+	"content": "file:///content.script",
+	"useAsGlobalScript": false,
+	"transpiledContent": null,
+	"lastRunSuccessful": false,
+	"isTypescript": false,
+	"language": "javascript",
+	"jsscriptGroup": "8724ce1d-db36-43cb-a923-3e0be5432b2a",
+	"package": "ace216dd-a722-4e40-9d39-6049629fca12"
+}

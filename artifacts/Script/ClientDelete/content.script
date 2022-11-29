@@ -1,0 +1,6 @@
+const data = await entities.p9_sf_connector.delete(req.query.id);
+result.data = {
+    status: "OK",
+    message: "Connector Deleted"
+};
+complete();

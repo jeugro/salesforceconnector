@@ -1,0 +1,157 @@
+const sfc = {
+
+    referenceField: null,
+    referenceData: null,
+    dataSaved: null,
+
+    getDetail: function (id) {
+        apiGet({
+            parameters: {
+                "id": id
+            }
+        }).then(async function (data) {
+            modelpageModelsDetail.setData(data);
+            toolFieldsFilter.setValue();
+            toolFieldsFilter.fireLiveChange();
+            treeFields.collapseAll();
+            oApp.to(pageModelsDetail);
+        });
+
+    },
+
+    getFields: function (tableName, parentField) {
+
+        return new Promise(function (resolve) {
+
+            apiObject({
+                "table": tableName
+            }).then(function (metadata) {
+                resolve(sfc.buildFields(metadata, parentField));
+            });
+
+        });
+
+    },
+
+    getChildren: async function (parentField, row) {
+
+        parentField.children = await sfc.getFields(parentField.referenceTo[0], parentField);
+        modelpageModelsDetail.refresh();
+
+    },
+
+    buildFields: function (metadata, parentField) {
+
+        let fields = [];
+
+        metadata.fields.forEach(function (field) {
+
+            let rec = {
+                _parent: "",
+                _selected: false,
+                label: field.label,
+                referenceTo: field.referenceTo,
+                filterable: field.filterable,
+                type: field.type,
+                picklistValues: JSON.stringify(field.picklistValues),
+                relationshipName: field.relationshipName,
+            }
+
+            // Parent
+            if (parentField) {
+
+                if (parentField.relationshipName) {
+
+                    if (parentField._parent) {
+                        rec._parent = parentField._parent + "." + parentField.relationshipName;
+                    } else {
+                        rec._parent = parentField.relationshipName;
+                    }
+
+                } else {
+                    rec._parent = parentField._parent;
+                }
+
+            }
+
+            // Name
+            rec.name = (rec._parent ? rec._parent + "." + field.name : field.name);
+
+            // Empty record for loading new metadata
+            if (rec.relationshipName) {
+                if (!rec.children) {
+                    rec.children = [{
+                        name: "",
+                    }]
+                }
+            }
+
+            fields.push(rec)
+
+        });
+
+        // When new connector
+        if (!modelpageModelsDetail.oData.metadata || !modelpageModelsDetail.oData.metadata.children) {
+
+            modelpageModelsDetail.oData.metadata = {
+                children: fields
+            }
+
+            modelpageModelsDetail.refresh();
+        }
+
+        return fields;
+
+    },
+
+    save: function () {
+
+        apiSave({
+            data: modelpageModelsDetail.oData
+        }).then(function (data) {
+            modelpageModelsDetail.setData(data);
+            sfc.dataSaved = modelpageModelsDetail.getJSON();
+
+            toastStatus.setMessage("Connector Saved")
+            toastStatus.clone().show();
+
+            toolModelsUpdate.firePress();
+
+        });
+
+    },
+
+    delete: function () {
+
+        sap.m.MessageBox.confirm("Delete connector from database ? This cannot be undone !", {
+            icon: sap.m.MessageBox.Icon.ERROR,
+            title: "Danger Zone",
+            actions: [sap.m.MessageBox.Action.DELETE, sap.m.MessageBox.Action.NO],
+            initialFocus: "No",
+            onClose: function (sAction) {
+
+                if (sAction === "DELETE") {
+
+                    apiDelete({
+                        parameters: {
+                            "id": modelpageModelsDetail.oData.id
+                        }
+                    }).then(function (data) {
+
+                        toolModelsUpdate.firePress();
+
+                        toastStatus.setMessage("Connector Deleted")
+                        toastStatus.clone().show();
+
+                        oApp.backToPage(pageModelsList);
+
+                    });
+
+                }
+            }
+        });
+
+
+
+    },
+}
